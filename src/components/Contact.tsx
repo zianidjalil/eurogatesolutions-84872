@@ -99,7 +99,7 @@ export const Contact = ({ lang, t }: ContactProps) => {
               <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
               <div>
                 <h4 className="font-semibold mb-1">România</h4>
-                <p className="text-sm text-muted-foreground">Drumului Belșugului n23, 062392 București</p>
+                <p className="text-sm text-muted-foreground">Drumul Belșugului n23, 062392 București</p>
               </div>
             </div>
           </motion.div>

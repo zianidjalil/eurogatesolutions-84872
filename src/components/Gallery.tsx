@@ -10,6 +10,8 @@ import P7 from '@/assets/gallery/P7.png';
 import P8 from '@/assets/gallery/P8.png';
 import P9 from '@/assets/gallery/P9.png';
 import P10 from '@/assets/gallery/P10.png';
+import P11 from '@/assets/gallery/P11.png';
+import P12 from '@/assets/gallery/P12.png';
 
 interface GalleryProps {
   lang: Language;
@@ -27,6 +29,8 @@ const galleryImages = [
   { src: P8, alt: 'Bucharest Unirii Square fountains' },
   { src: P9, alt: 'Bucharest city center aerial view' },
   { src: P10, alt: 'Brasov Council Square' },
+  { src: P11, alt: 'Bucharest University buildings' },
+  { src: P12, alt: 'University race event in Bucharest' },
 ];
 
 export const Gallery = ({ lang, t }: GalleryProps) => {

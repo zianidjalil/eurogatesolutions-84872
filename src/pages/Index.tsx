@@ -1,0 +1,41 @@
+import { useState } from 'react';
+import { Header } from '@/components/Header';
+import { Hero } from '@/components/Hero';
+import { Programs } from '@/components/Programs';
+import { Gallery } from '@/components/Gallery';
+import { WhyUs } from '@/components/WhyUs';
+import { Guarantees } from '@/components/Guarantees';
+import { RefundPolicy } from '@/components/RefundPolicy';
+import { FAQ } from '@/components/FAQ';
+import { Contact } from '@/components/Contact';
+import { Footer } from '@/components/Footer';
+import { FloatingElements } from '@/components/FloatingElements';
+import { MatrixBackground } from '@/components/MatrixBackground';
+import { translations } from '@/translations';
+import { Language } from '@/types/translations';
+
+const Index = () => {
+  const [lang, setLang] = useState<Language>('fr');
+  const t = translations[lang] || translations['fr'];
+
+  return (
+    <div className="min-h-screen bg-background text-foreground relative">
+      <MatrixBackground />
+      <FloatingElements />
+      <div className="relative z-10">
+        <Header lang={lang} onLanguageChange={setLang} t={t} />
+        <Hero lang={lang} t={t} />
+        <Programs lang={lang} t={t} />
+        <Gallery lang={lang} t={t} />
+        <WhyUs lang={lang} t={t} />
+        <Guarantees lang={lang} t={t} />
+        <RefundPolicy lang={lang} t={t} />
+        <FAQ lang={lang} t={t} />
+        <Contact lang={lang} t={t} />
+        <Footer lang={lang} />
+      </div>
+    </div>
+  );
+};
+
+export default Index;

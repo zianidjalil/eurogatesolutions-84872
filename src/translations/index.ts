@@ -72,11 +72,11 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
         },
         {
           title: 'Paiement sécurisé',
-          description: 'CIB, BaridiMob, virement (DZD/EUR)',
+          description: 'CIB, BaridiMob, virement',
         },
         {
           title: 'Support multilingue',
-          description: 'En français et arabe — 7j/7',
+          description: 'Support client disponible en EN, FR et AR 7 j/7.',
         },
         {
           title: 'Accompagnement de A à Z',
@@ -223,11 +223,11 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
         },
         {
           title: 'دفع آمن',
-          description: 'CIB، BaridiMob، تحويل (DZD/EUR)',
+          description: 'CIB، BaridiMob، تحويل',
         },
         {
           title: 'دعم متعدد اللغات',
-          description: 'بالفرنسية والعربية — 7 أيام/7',
+          description: 'دعم العملاء متاح بالإنجليزية والفرنسية والعربية 7 أيام/7.',
         },
         {
           title: 'مرافقة من الألف إلى الياء',
@@ -374,11 +374,11 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
         },
         {
           title: 'Secure payment',
-          description: 'CIB, BaridiMob, transfer (DZD/EUR)',
+          description: 'CIB, BaridiMob, transfer',
         },
         {
           title: 'Multilingual support',
-          description: 'In French and Arabic — 7/7',
+          description: 'Customer support available in EN, FR and AR 7/7.',
         },
         {
           title: 'A to Z support',

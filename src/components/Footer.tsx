@@ -68,7 +68,7 @@ export const Footer = ({ lang }: FooterProps) => {
             </p>
             <p>
               Nous ne collectons aucune donnée personnelle via ce site web. Si vous nous contactez par e-mail, 
-              votre message sera utilisé uniquement pour répondre à votre demande et supprimé suite à votre acord dans un délai de{' '}
+              votre message sera utilisé uniquement pour répondre à votre demande et supprimé suite à votre accord dans un délai de{' '}
               <span className="font-semibold text-foreground">24 Heures</span>.
             </p>
             <p>
@@ -90,10 +90,10 @@ export const Footer = ({ lang }: FooterProps) => {
         {/* Copyright */}
         <div className="text-center space-y-2">
           <p className="text-muted-foreground">
-            © 2025 Eurogate.DZ {lang === 'fr' ? 'Tous droits réservés.' : lang === 'en' ? 'All rights reserved.' : 'جميع الحقوق محفوظة.'}
+            © 2025 {lang === 'fr' ? "L'activité de l'entreprise Eurogate est enregistrée et tous droits réservés." : lang === 'en' ? 'Eurogate business activity is registered and all rights reserved.' : 'نشاط شركة Eurogate مسجل وجميع الحقوق محفوظة.'}
           </p>
           <p className="text-muted-foreground text-sm">
-            Created by Eurogate Consultant
+            Created by Eurogate Marketing team
           </p>
         </div>
       </div>

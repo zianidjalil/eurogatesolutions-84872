@@ -22,7 +22,6 @@ const galleryImages = [
   { src: P1, alt: 'Bucharest Central Library at sunset' },
   { src: P2, alt: 'Corvin Castle in Transylvania' },
   { src: P3, alt: 'Bran Castle, Dracula\'s Castle' },
-  { src: P4, alt: 'Welcome to Romania cultural elements' },
   { src: P5, alt: 'Sucevita Monastery painted walls' },
   { src: P6, alt: 'Palace of Parliament aerial view' },
   { src: P7, alt: 'Sibiu old town panorama' },

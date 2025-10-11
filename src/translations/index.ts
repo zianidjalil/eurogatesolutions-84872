@@ -72,7 +72,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
         },
         {
           title: 'Paiement sécurisé',
-          description: 'CIB, BaridiMob, virement',
+          description: 'CIB par virement en toute sécurité sans frais cachés',
         },
         {
           title: 'Support multilingue',
@@ -223,7 +223,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
         },
         {
           title: 'دفع آمن',
-          description: 'CIB، BaridiMob، تحويل',
+          description: 'CIB عن طريق التحويل بكل أمان دون رسوم خفية',
         },
         {
           title: 'دعم متعدد اللغات',
@@ -374,7 +374,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
         },
         {
           title: 'Secure payment',
-          description: 'CIB, BaridiMob, transfer',
+          description: 'CIB by transfer in complete security without hidden fees',
         },
         {
           title: 'Multilingual support',

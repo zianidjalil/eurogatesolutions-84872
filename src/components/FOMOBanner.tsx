@@ -54,8 +54,10 @@ export const FOMOBanner = () => {
             </h2>
 
             <p className="text-lg text-muted-foreground">
-              Rejoignez des centaines d'étudiants qui ont déjà transformé leur avenir en Roumanie. 
-              Places limitées pour la prochaine rentrée !
+              Do You Want to Save Money… Or Invest in Your Security with Proactive Risk Management Designed for EU–North Africa Operations?
+            </p>
+            <p className="text-base text-muted-foreground italic mt-2">
+              The ball is in your court.
             </p>
 
             <div className="space-y-4">
@@ -70,8 +72,8 @@ export const FOMOBanner = () => {
                   <Users className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground">+500 Étudiants</p>
-                  <p className="text-sm text-muted-foreground">Accompagnés avec succès</p>
+                  <p className="font-semibold text-foreground">Lancement en 5 jours ouvrables</p>
+                  <p className="text-sm text-muted-foreground">Première vague de candidats</p>
                 </div>
               </motion.div>
 

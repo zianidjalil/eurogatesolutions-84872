@@ -129,6 +129,10 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
           question: 'Puis-je travailler pendant mes études?',
           answer: 'Oui, les étudiants internationaux peuvent travailler en Roumanie avec certaines conditions.',
         },
+        {
+          question: 'Comment assurez-vous votre activité en Algérie?',
+          answer: 'Pour l\'apprentissage, nous assurons en collaboration avec des instituts, des académies et des écoles agréées à lourd poids dans le domaine afin d\'offrir une expérience unique et innovante de l\'idée à l\'opérationnel.',
+        },
       ],
     },
     contact: {
@@ -280,6 +284,10 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
           question: 'هل يمكنني العمل أثناء الدراسة؟',
           answer: 'نعم، يمكن للطلاب الدوليين العمل في رومانيا بشروط معينة.',
         },
+        {
+          question: 'كيف تضمنون نشاطكم في الجزائر؟',
+          answer: 'من أجل التعليم، نضمن بالتعاون مع المعاهد والأكاديميات والمدارس المعتمدة ذات الثقل الكبير في المجال من أجل تقديم تجربة فريدة ومبتكرة من الفكرة إلى التنفيذ.',
+        },
       ],
     },
     contact: {
@@ -430,6 +438,10 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
         {
           question: 'Can I work while studying?',
           answer: 'Yes, international students can work in Romania under certain conditions.',
+        },
+        {
+          question: 'How do you ensure your activity in Algeria?',
+          answer: 'For training, we ensure through collaboration with accredited institutes, academies and schools with significant weight in the field to offer a unique and innovative experience from idea to implementation.',
         },
       ],
     },

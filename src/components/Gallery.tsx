@@ -12,6 +12,7 @@ import P9 from '@/assets/gallery/P9.png';
 import P10 from '@/assets/gallery/P10.png';
 import P11 from '@/assets/gallery/P11.png';
 import P12 from '@/assets/gallery/P12.png';
+import ASE_INNOV from '@/assets/gallery/ASE_INNOV.png';
 
 interface GalleryProps {
   lang: Language;
@@ -30,6 +31,7 @@ const galleryImages = [
   { src: P10, alt: 'Brasov Council Square' },
   { src: P11, alt: 'Bucharest University buildings' },
   { src: P12, alt: 'University race event in Bucharest' },
+  { src: ASE_INNOV, alt: 'Bucharest University of Economic Studies - WURI 2025 Rankings Global Top 400, 155th place' },
 ];
 
 export const Gallery = ({ lang, t }: GalleryProps) => {

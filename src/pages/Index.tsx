@@ -3,6 +3,7 @@ import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { Programs } from '@/components/Programs';
 import { Gallery } from '@/components/Gallery';
+import { FOMOBanner } from '@/components/FOMOBanner';
 import { WhyUs } from '@/components/WhyUs';
 import { Guarantees } from '@/components/Guarantees';
 import { RefundPolicy } from '@/components/RefundPolicy';
@@ -27,6 +28,7 @@ const Index = () => {
         <Hero lang={lang} t={t} />
         <Programs lang={lang} t={t} />
         <Gallery lang={lang} t={t} />
+        <FOMOBanner />
         <WhyUs lang={lang} t={t} />
         <Guarantees lang={lang} t={t} />
         <RefundPolicy lang={lang} t={t} />

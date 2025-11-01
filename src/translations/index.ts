@@ -67,7 +67,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       title: 'Pourquoi Choisir EUROGATE ?',
       items: [
         {
-          title: 'Partenaires locaux certifiés',
+          title: 'Partenaires locaux et internationaux certifiés et agréés',
           description: 'Avocats, traducteurs, universités, RH',
         },
         {
@@ -222,7 +222,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       title: 'لماذا تختار EUROGATE؟',
       items: [
         {
-          title: 'شركاء محليون معتمدون',
+          title: 'شركاء محليون ودوليون معتمدون ومعتمدون',
           description: 'محامون، مترجمون، جامعات، موارد بشرية',
         },
         {
@@ -377,7 +377,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       title: 'Why Choose EUROGATE?',
       items: [
         {
-          title: 'Certified local partners',
+          title: 'Certified and accredited local and international partners',
           description: 'Lawyers, translators, universities, HR',
         },
         {

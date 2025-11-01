@@ -104,8 +104,8 @@ export const FOMOBanner = () => {
                   <Clock className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground">Inscription Rapide</p>
-                  <p className="text-sm text-muted-foreground">Traitement en 1-2 semaines</p>
+                  <p className="font-semibold text-foreground">Inscription Rapide en 15 secondes</p>
+                  <p className="text-sm text-muted-foreground">Process simplifié et efficace</p>
                 </div>
               </motion.div>
             </div>

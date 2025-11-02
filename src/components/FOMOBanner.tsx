@@ -1,6 +1,52 @@
 import { motion } from 'framer-motion';
 import { Clock, Users, Award } from 'lucide-react';
 import soccerImage from '@/assets/soccer-fomo.jpg';
+import { useState, useEffect } from 'react';
+
+const CountdownTimer = () => {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 5,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 5);
+
+    const interval = setInterval(() => {
+      const now = new Date();
+      const difference = targetDate.getTime() - now.getTime();
+
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        });
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="flex items-center gap-2 bg-destructive/10 border-2 border-destructive rounded-lg px-4 py-3">
+      <Clock className="w-5 h-5 text-destructive" />
+      <div className="flex gap-3 font-mono text-lg font-bold">
+        <span className="text-destructive">{timeLeft.days}j</span>
+        <span className="text-muted-foreground">:</span>
+        <span className="text-destructive">{String(timeLeft.hours).padStart(2, '0')}h</span>
+        <span className="text-muted-foreground">:</span>
+        <span className="text-destructive">{String(timeLeft.minutes).padStart(2, '0')}m</span>
+        <span className="text-muted-foreground">:</span>
+        <span className="text-destructive">{String(timeLeft.seconds).padStart(2, '0')}s</span>
+      </div>
+    </div>
+  );
+};
 
 export const FOMOBanner = () => {
   return (
@@ -59,6 +105,11 @@ export const FOMOBanner = () => {
             <p className="text-base text-muted-foreground italic mt-2">
               Ce que vous décidez aujourd'hui définira ce que vous serez demain.
             </p>
+            <p className="text-base font-semibold text-foreground mt-4">
+              Le marché n'attend pas ceux qui 'préparent'. Il récompense ceux qui agissent avec audace.
+            </p>
+
+            <CountdownTimer />
 
             <div className="space-y-4">
               <motion.div

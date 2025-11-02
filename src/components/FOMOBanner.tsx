@@ -161,14 +161,17 @@ export const FOMOBanner = () => {
               </motion.div>
             </div>
 
-            <motion.a
-              href="#contact"
+            <motion.button
+              onClick={() => {
+                const chatButton = document.querySelector('[data-chatbot-trigger]') as HTMLButtonElement;
+                if (chatButton) chatButton.click();
+              }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-block bg-gradient-to-r from-primary to-accent text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-shadow"
             >
               Réservez Votre Place Maintenant
-            </motion.a>
+            </motion.button>
           </motion.div>
         </div>
       </div>

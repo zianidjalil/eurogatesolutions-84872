@@ -18,7 +18,10 @@ interface ChatbotProps {
 export const Chatbot = ({ lang, t }: ChatbotProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'assistant', content: t.chatbot.welcome },
+    { 
+      role: 'assistant', 
+      content: '👋 Bonjour !\nVous avez entendu parler de notre MasterClass exclusive sur l\'intégration réussie en Roumanie (UE) pour les talents, étudiants et professionnels nord-africains ?\n\nElle démarre dans 5 jours — et seules 12 places sont disponibles.\n\nSouhaitez-vous réserver votre place maintenant ?\n👉 Répondez OUI pour commencer.' 
+    },
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -140,6 +143,7 @@ export const Chatbot = ({ lang, t }: ChatbotProps) => {
           size="lg"
           onClick={() => setIsOpen(!isOpen)}
           className="rounded-full w-16 h-16 bg-gradient-primary shadow-glow hover:shadow-elegant"
+          data-chatbot-trigger
         >
           {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
         </Button>

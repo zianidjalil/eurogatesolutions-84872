@@ -54,10 +54,10 @@ export const FOMOBanner = () => {
             </h2>
 
             <p className="text-lg text-muted-foreground">
-              Voulez-vous économiser de l'argent… Ou investir dans votre sécurité avec une gestion proactive des risques conçue pour les opérations UE–Afrique du Nord ?
+              Voulez-vous économiser de l'argent… ou protéger votre avenir ?
             </p>
             <p className="text-base text-muted-foreground italic mt-2">
-              La balle est dans votre camp.
+              Ce que vous décidez aujourd'hui définira ce que vous serez demain.
             </p>
 
             <div className="space-y-4">

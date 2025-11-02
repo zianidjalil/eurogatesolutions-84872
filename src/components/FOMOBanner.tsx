@@ -73,7 +73,7 @@ export const FOMOBanner = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">Lancement en 5 jours ouvrables</p>
-                  <p className="text-sm text-muted-foreground">Première vague de candidats</p>
+                  <p className="text-sm text-muted-foreground">Première vague de candidats européens</p>
                 </div>
               </motion.div>
 

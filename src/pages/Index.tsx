@@ -12,11 +12,13 @@ import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
 import { FloatingElements } from '@/components/FloatingElements';
 import { MatrixBackground } from '@/components/MatrixBackground';
+import { Chatbot } from '@/components/Chatbot';
 import { translations } from '@/translations';
 import { Language } from '@/types/translations';
 
 const Index = () => {
   const [lang, setLang] = useState<Language>('fr');
+  const [chatbotOpen, setChatbotOpen] = useState(false);
   const t = translations[lang] || translations['fr'];
 
   return (
@@ -28,13 +30,14 @@ const Index = () => {
         <Hero lang={lang} t={t} />
         <Programs lang={lang} t={t} />
         <Gallery lang={lang} t={t} />
-        <FOMOBanner />
+        <FOMOBanner onReserveClick={() => setChatbotOpen(true)} />
         <WhyUs lang={lang} t={t} />
         <Guarantees lang={lang} t={t} />
         <RefundPolicy lang={lang} t={t} />
         <FAQ lang={lang} t={t} />
         <Contact lang={lang} t={t} />
         <Footer lang={lang} />
+        <Chatbot lang={lang} t={t} isOpen={chatbotOpen} setIsOpen={setChatbotOpen} />
       </div>
     </div>
   );

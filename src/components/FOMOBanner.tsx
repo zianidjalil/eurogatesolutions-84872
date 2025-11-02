@@ -48,7 +48,11 @@ const CountdownTimer = () => {
   );
 };
 
-export const FOMOBanner = () => {
+interface FOMOBannerProps {
+  onReserveClick: () => void;
+}
+
+export const FOMOBanner = ({ onReserveClick }: FOMOBannerProps) => {
   return (
     <section className="py-16 px-4 relative overflow-hidden bg-gradient-to-br from-primary/10 via-background to-accent/10">
       <div className="container mx-auto">
@@ -162,10 +166,7 @@ export const FOMOBanner = () => {
             </div>
 
             <motion.button
-              onClick={() => {
-                const chatButton = document.querySelector('[data-chatbot-trigger]') as HTMLButtonElement;
-                if (chatButton) chatButton.click();
-              }}
+              onClick={onReserveClick}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-block bg-gradient-to-r from-primary to-accent text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-shadow"

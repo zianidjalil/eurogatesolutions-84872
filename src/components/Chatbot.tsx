@@ -13,10 +13,11 @@ interface Message {
 interface ChatbotProps {
   lang: Language;
   t: any;
+  isOpen: boolean;
+  setIsOpen: (isOpen: boolean) => void;
 }
 
-export const Chatbot = ({ lang, t }: ChatbotProps) => {
-  const [isOpen, setIsOpen] = useState(false);
+export const Chatbot = ({ lang, t, isOpen, setIsOpen }: ChatbotProps) => {
   const [messages, setMessages] = useState<Message[]>([
     { 
       role: 'assistant', 
@@ -143,7 +144,6 @@ export const Chatbot = ({ lang, t }: ChatbotProps) => {
           size="lg"
           onClick={() => setIsOpen(!isOpen)}
           className="rounded-full w-16 h-16 bg-gradient-primary shadow-glow hover:shadow-elegant"
-          data-chatbot-trigger
         >
           {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
         </Button>

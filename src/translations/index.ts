@@ -58,7 +58,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
           description: 'Accompagnement spécialisé pour créer votre entreprise en Roumanie avec support juridique et fiscal',
           features: [
             'Consultation juridique et professionnelle',
-            'Domaine à exploiter : l\'immobilier, microsociété, startup, métiers de main d\'œuvre'
+            'Domaine à exploiter : pharma, l\'industrie, l\'immobilier, microsociété, startup, métiers de main d\'œuvre'
           ]
         },
       ],
@@ -72,7 +72,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
         },
         {
           title: 'Paiement sécurisé',
-          description: 'CIB par virement en toute sécurité sans frais cachés',
+          description: 'Par virement bancaire, en toute sécurité et sans frais cachés, ou directement au siège social',
         },
         {
           title: 'Support multilingue',
@@ -89,11 +89,11 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       items: [
         {
           title: 'Satisfaction Client',
-          description: 'Nous nous engageons à vous offrir un service de qualité exceptionnelle',
+          description: 'Nous nous engageons à vous offrir un service de qualité exceptionnelle, en collaboration avec nos partenaires B2B, à l\'échelle nationale et internationale',
         },
         {
           title: 'Suivi Personnalisé',
-          description: 'Un conseiller dédié vous accompagne tout au long de votre parcours',
+          description: 'Une équipe coordonnée de sept consultants internationaux, basés à l\'étranger, vous garantit un accompagnement personnalisé à chaque étape de votre parcours.',
         },
       ],
     },
@@ -115,7 +115,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       items: [
         {
           question: 'Quels sont les délais de traitement?',
-          answer: 'Délais de traitement du dossier dès réception du visa jusqu\'à obtention du permis de séjour pour étudiant entre une semaine (jours ouvrables) jusqu\'à deux semaines.',
+          answer: 'Un service « Swift » qui garantit un délai de traitement du dossier — de la réception du visa au dépôt en ligne de la demande d\'établissement du permis de séjour étudiant — de deux à cinq jours ouvrables',
         },
         {
           question: 'Dois-je parler roumain?',

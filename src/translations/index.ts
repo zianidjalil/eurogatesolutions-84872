@@ -123,11 +123,11 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
         },
         {
           question: 'Aidez-vous à trouver un logement?',
-          answer: 'Oui! Nous vous assistons dans la recherche et la sécurisation d\'un logement adapté.',
+          answer: 'Un consultant expert en immobilier assure, grâce à son réseau, une assistance complète dans la recherche et la sécurisation d\'un logement adapté.',
         },
         {
           question: 'Puis-je travailler pendant mes études?',
-          answer: 'Oui, les étudiants internationaux peuvent travailler en Roumanie avec certaines conditions.',
+          answer: 'Oui, les étudiants internationaux peuvent travailler légalement en Roumanie à temps partiel — soit 4 à 6 heures par jour — selon la région. »',
         },
         {
           question: 'Comment assurez-vous votre activité en Algérie?',

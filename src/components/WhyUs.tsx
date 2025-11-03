@@ -48,6 +48,23 @@ export const WhyUs = ({ lang, t }: WhyUsProps) => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             {t.whyUs.title}
           </h2>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="mt-8 max-w-4xl mx-auto rounded-lg overflow-hidden shadow-lg"
+          >
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-auto"
+            >
+              <source src="/why-us-video.mp4" type="video/mp4" />
+            </video>
+          </motion.div>
         </motion.div>
 
         <motion.div

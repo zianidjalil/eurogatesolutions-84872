@@ -4,7 +4,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Language, Translation } from '@/types/translations';
 import programsHero from '@/assets/programs-hero.png';
-import exclusiveBadge from '@/assets/exclusive-badge.jpg';
 
 interface ProgramsProps {
   lang: Language;
@@ -22,46 +21,26 @@ export const Programs = ({ lang, t }: ProgramsProps) => {
       <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="relative">
-          {/* Exclusive Badge - Top Right */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
           <motion.div
-            initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
-            whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+            initial={{ scale: 0.9 }}
+            whileInView={{ scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="absolute top-0 right-4 md:right-12 z-20 text-center"
+            transition={{ duration: 0.5 }}
           >
-            <img 
-              src={exclusiveBadge} 
-              alt="Exclusive Badge" 
-              className="w-24 h-24 md:w-32 md:h-32 animate-pulse"
-            />
-            <p className="text-xs md:text-sm font-bold text-yellow-500 mt-2">
-              Entrepreneur/Investisseur
-            </p>
+            <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient">
+              🎯 {t.programs.title}
+            </h2>
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <motion.div
-              initial={{ scale: 0.9 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient">
-                🎯 {t.programs.title}
-              </h2>
-            </motion.div>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              {t.programs.subtitle}
-            </p>
-          </motion.div>
-        </div>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            {t.programs.subtitle}
+          </p>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

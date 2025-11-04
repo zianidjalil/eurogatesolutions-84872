@@ -3,6 +3,7 @@ import { GraduationCap, Rocket, Crown, TrendingUp, CheckCircle2 } from 'lucide-r
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Language, Translation } from '@/types/translations';
+import programsHero from '@/assets/programs-hero.png';
 
 interface ProgramsProps {
   lang: Language;
@@ -39,6 +40,20 @@ export const Programs = ({ lang, t }: ProgramsProps) => {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             {t.programs.subtitle}
           </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="mb-16 max-w-5xl mx-auto"
+        >
+          <img 
+            src={programsHero} 
+            alt="Programmes Premium" 
+            className="w-full h-auto rounded-2xl shadow-2xl"
+          />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto">

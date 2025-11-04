@@ -84,13 +84,16 @@ export const Programs = ({ lang, t }: ProgramsProps) => {
                       <Icon className="w-10 h-10 text-primary group-hover:text-accent transition-colors duration-500" />
                     </div>
                     <CardTitle className="text-2xl md:text-3xl mb-3 group-hover:text-primary transition-colors duration-300">
-                      <span className={`bg-gradient-to-r ${
-                        program.name.includes('Culture') ? 'from-yellow-500 via-yellow-500 to-yellow-500' :
-                        program.name.includes('VIP') ? 'from-red-500 via-red-600 to-red-700' :
-                        index === 0 ? 'from-blue-500 via-blue-600 to-yellow-500' :
-                        index === 1 ? 'from-yellow-500 via-yellow-600 to-orange-500' :
-                        'from-violet-600 via-violet-700 to-blue-600'
-                      } bg-clip-text text-transparent font-bold`}>
+                      <span className={`${
+                        program.name.includes('Formation') ? 'text-white font-bold' :
+                        `bg-gradient-to-r ${
+                          program.name.includes('Culture') ? 'from-yellow-500 via-yellow-500 to-yellow-500' :
+                          program.name.includes('VIP') ? 'from-red-500 via-red-600 to-red-700' :
+                          index === 0 ? 'from-blue-500 via-blue-600 to-yellow-500' :
+                          index === 1 ? 'from-yellow-500 via-yellow-600 to-orange-500' :
+                          'from-violet-600 via-violet-700 to-blue-600'
+                        } bg-clip-text text-transparent font-bold`
+                      }`}>
                         {program.name}
                       </span>
                     </CardTitle>

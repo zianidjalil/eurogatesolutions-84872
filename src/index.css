@@ -56,10 +56,15 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
+    cursor: url('/stethoscope-cursor.png'), auto;
   }
 
   body {
     @apply bg-background text-foreground;
+  }
+  
+  button, a, input, select, textarea {
+    cursor: url('/stethoscope-cursor.png'), pointer;
   }
 }
 

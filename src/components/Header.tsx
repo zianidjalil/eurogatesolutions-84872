@@ -16,6 +16,7 @@ export const Header = ({ lang, onLanguageChange, t }: HeaderProps) => {
 
   const menuItems = [
     { key: 'programs', href: '#programs' },
+    { key: 'b2b', href: '#b2b' },
     { key: 'whyUs', href: '#why-us' },
     { key: 'guarantees', href: '#guarantees' },
     { key: 'faq', href: '#faq' },

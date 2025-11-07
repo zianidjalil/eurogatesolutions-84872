@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone } from 'lucide-react';
+import { Mail, Phone, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Language, Translation } from '@/types/translations';
 
@@ -11,6 +11,11 @@ interface HeroProps {
 export const Hero = ({ lang, t }: HeroProps) => {
   const handleConsultation = () => {
     window.location.href = 'mailto:zianikhaled.ro@gmail.com';
+  };
+
+  const handleDownloadGuide = () => {
+    // Placeholder for guide download - could link to a PDF or lead capture form
+    window.location.href = 'mailto:eurogate@outlook.fr?subject=Demande Guide Roumanie 2025';
   };
 
   return (
@@ -45,14 +50,43 @@ export const Hero = ({ lang, t }: HeroProps) => {
             {t.hero.subtitle}
           </p>
 
+          {/* Audience Segmentation Badges */}
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3 }}
+              className="px-6 py-3 rounded-full bg-primary/10 border border-primary/30 backdrop-blur-sm"
+            >
+              <span className="text-primary font-semibold">👨‍🎓 {t.hero.b2cSegment}</span>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.4 }}
+              className="px-6 py-3 rounded-full bg-accent/10 border border-accent/30 backdrop-blur-sm"
+            >
+              <span className="text-accent font-semibold">💼 {t.hero.b2bSegment}</span>
+            </motion.div>
+          </div>
+
           {/* Call to Action */}
-          <div className="space-y-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               onClick={handleConsultation}
               size="lg"
               className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_30px_rgba(16,185,129,0.5)] hover:shadow-[0_0_40px_rgba(16,185,129,0.7)] transition-all duration-300"
             >
-              {t.hero.cta}
+              📞 {t.hero.cta}
+            </Button>
+            <Button
+              onClick={handleDownloadGuide}
+              size="lg"
+              variant="outline"
+              className="text-lg px-8 py-6 border-primary/50 hover:bg-primary/10 text-primary backdrop-blur-sm"
+            >
+              <Download className="w-5 h-5 mr-2" />
+              {t.hero.secondaryCta}
             </Button>
           </div>
         </motion.div>

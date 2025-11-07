@@ -8,11 +8,15 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       guarantees: 'Garanties',
       faq: 'FAQ',
       contact: 'Contact',
+      b2b: 'Entreprises & Partenariats',
     },
     hero: {
       title: 'Votre Avenir en Roumanie Commence Ici',
       subtitle: 'Accompagnement premium pour vos études et votre immigration en Roumanie',
-      cta: 'Consultation gratuite de 15 minutes',
+      cta: 'Réservez un appel gratuit',
+      secondaryCta: 'Téléchargez notre guide Roumanie 2025',
+      b2cSegment: 'Pour les étudiants & particuliers',
+      b2bSegment: 'Pour les entreprises & investisseurs',
     },
     programs: {
       title: 'Nos Programmes Premium',
@@ -71,8 +75,8 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
           description: 'Avocats, traducteurs, universités, RH',
         },
         {
-          title: 'Paiement sécurisé',
-          description: 'Par virement bancaire, en toute sécurité et sans frais cachés, ou directement au siège social',
+          title: 'Paiement par virement bancaire',
+          description: 'Paiement par virement bancaire (CIB, CCP, BaridiMob) – confirmé via formulaire sécurisé – sans frais cachés',
         },
         {
           title: 'Support multilingue',
@@ -155,6 +159,36 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       placeholder: 'Posez votre question...',
       welcome: 'Bonjour! Comment puis-je vous aider?',
     },
+    b2b: {
+      title: 'Partenariats & Solutions Entreprises',
+      subtitle: 'Services B2B pour instituts de formation, entreprises et investisseurs',
+      cta: 'Demander une proposition commerciale',
+      items: [
+        {
+          title: 'Partenariats Académiques',
+          description: 'Collaboration avec instituts de formation algériens (ex: Genius Training Institute) pour programmes de mobilité EU-Algérie',
+          features: ['Programmes personnalisés de formation', 'Support administratif complet', 'Certification internationale']
+        },
+        {
+          title: 'Solutions pour Investisseurs',
+          description: 'Accompagnement pour créer votre entité roumaine, modèle incubateur et implantation stratégique',
+          features: ['Conseil juridique & fiscal', 'Domiciliation d\'entreprise', 'Support RH international']
+        },
+        {
+          title: 'Formation Interculturelle EDM',
+          description: 'Formation EDM et interculturelle pour entreprises multinationaleset expatriés',
+          features: ['Training interculturel sur mesure', 'Coaching d\'équipes internationales', 'Support RH & recrutement']
+        }
+      ],
+      contactForm: {
+        title: 'Contact Entreprises',
+        orgType: 'Type d\'organisation',
+        annualVolume: 'Volume annuel de stagiaires / employés',
+        phone: 'Téléphone professionnel',
+        message: 'Décrivez votre projet',
+        submit: 'Envoyer la demande'
+      }
+    },
   },
   ar: {
     header: {
@@ -163,11 +197,15 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       guarantees: 'الضمانات',
       faq: 'الأسئلة الشائعة',
       contact: 'اتصل بنا',
+      b2b: 'الشركات والشراكات',
     },
     hero: {
       title: 'مستقبلك في رومانيا يبدأ هنا',
       subtitle: 'مرافقة متميزة لدراستك وهجرتك إلى رومانيا',
-      cta: 'استشارة مجانية لمدة 15 دقيقة',
+      cta: 'احجز مكالمة مجانية',
+      secondaryCta: 'قم بتنزيل دليل رومانيا 2025',
+      b2cSegment: 'للطلاب والأفراد',
+      b2bSegment: 'للشركات والمستثمرين',
     },
     programs: {
       title: 'برامجنا المتميزة',
@@ -226,8 +264,8 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
           description: 'محامون، مترجمون، جامعات، موارد بشرية',
         },
         {
-          title: 'دفع آمن',
-          description: 'CIB عن طريق التحويل بكل أمان دون رسوم خفية',
+          title: 'الدفع عن طريق التحويل البنكي',
+          description: 'الدفع عن طريق التحويل البنكي (CIB، CCP، BaridiMob) - مؤكد عبر نموذج آمن - بدون رسوم مخفية',
         },
         {
           title: 'دعم متعدد اللغات',
@@ -310,6 +348,36 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       placeholder: 'اطرح سؤالك...',
       welcome: 'مرحباً! كيف يمكنني مساعدتك؟',
     },
+    b2b: {
+      title: 'الشراكات وحلول الشركات',
+      subtitle: 'خدمات B2B لمعاهد التدريب والشركات والمستثمرين',
+      cta: 'طلب عرض تجاري',
+      items: [
+        {
+          title: 'الشراكات الأكاديمية',
+          description: 'التعاون مع معاهد التدريب الجزائرية لبرامج التنقل بين الاتحاد الأوروبي والجزائر',
+          features: ['برامج تدريب مخصصة', 'دعم إداري كامل', 'شهادة دولية']
+        },
+        {
+          title: 'حلول للمستثمرين',
+          description: 'مرافقة لإنشاء كيانك الروماني ونموذج الحاضنة والزرع الاستراتيجي',
+          features: ['استشارات قانونية وضريبية', 'إقامة الشركة', 'دعم الموارد البشرية الدولية']
+        },
+        {
+          title: 'التدريب الثقافي EDM',
+          description: 'تدريب EDM والثقافات المتعددة للشركات متعددة الجنسيات والمغتربين',
+          features: ['تدريب ثقافي مخصص', 'تدريب الفرق الدولية', 'دعم الموارد البشرية والتوظيف']
+        }
+      ],
+      contactForm: {
+        title: 'اتصال الشركات',
+        orgType: 'نوع المنظمة',
+        annualVolume: 'الحجم السنوي للمتدربين / الموظفين',
+        phone: 'هاتف العمل',
+        message: 'صف مشروعك',
+        submit: 'إرسال الطلب'
+      }
+    },
   },
   en: {
     header: {
@@ -318,11 +386,15 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       guarantees: 'Guarantees',
       faq: 'FAQ',
       contact: 'Contact',
+      b2b: 'Business & Partnerships',
     },
     hero: {
       title: 'Your Future in Romania Starts Here',
       subtitle: 'Premium support for your studies and immigration to Romania',
-      cta: 'Free 15-minute consultation',
+      cta: 'Book a free call',
+      secondaryCta: 'Download Romania 2025 Guide',
+      b2cSegment: 'For students & individuals',
+      b2bSegment: 'For businesses & investors',
     },
     programs: {
       title: 'Our Premium Programs',
@@ -381,8 +453,8 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
           description: 'Lawyers, translators, universities, HR',
         },
         {
-          title: 'Secure payment',
-          description: 'CIB by transfer in complete security without hidden fees',
+          title: 'Payment by bank transfer',
+          description: 'Payment by bank transfer (CIB, CCP, BaridiMob) – confirmed via secure form – no hidden fees',
         },
         {
           title: 'Multilingual support',
@@ -464,6 +536,36 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       title: 'Assistant',
       placeholder: 'Ask your question...',
       welcome: 'Hello! How can I help you?',
+    },
+    b2b: {
+      title: 'Partnerships & Business Solutions',
+      subtitle: 'B2B services for training institutes, companies and investors',
+      cta: 'Request a business proposal',
+      items: [
+        {
+          title: 'Academic Partnerships',
+          description: 'Collaboration with Algerian training institutes for EU-Algeria mobility programs',
+          features: ['Customized training programs', 'Full administrative support', 'International certification']
+        },
+        {
+          title: 'Investor Solutions',
+          description: 'Support for creating your Romanian entity, incubator model and strategic establishment',
+          features: ['Legal & tax consulting', 'Company domiciliation', 'International HR support']
+        },
+        {
+          title: 'EDM Intercultural Training',
+          description: 'EDM and intercultural training for multinational companies and expatriates',
+          features: ['Custom intercultural training', 'International team coaching', 'HR & recruitment support']
+        }
+      ],
+      contactForm: {
+        title: 'Business Contact',
+        orgType: 'Organization type',
+        annualVolume: 'Annual volume of trainees / employees',
+        phone: 'Business phone',
+        message: 'Describe your project',
+        submit: 'Submit request'
+      }
     },
   },
 };

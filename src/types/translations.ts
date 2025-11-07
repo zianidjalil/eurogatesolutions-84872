@@ -7,11 +7,15 @@ export interface Translation {
     guarantees: string;
     faq: string;
     contact: string;
+    b2b: string;
   };
   hero: {
     title: string;
     subtitle: string;
     cta: string;
+    secondaryCta: string;
+    b2cSegment: string;
+    b2bSegment: string;
   };
   programs: {
     title: string;
@@ -71,5 +75,23 @@ export interface Translation {
     title: string;
     placeholder: string;
     welcome: string;
+  };
+  b2b: {
+    title: string;
+    subtitle: string;
+    cta: string;
+    items: Array<{
+      title: string;
+      description: string;
+      features: string[];
+    }>;
+    contactForm: {
+      title: string;
+      orgType: string;
+      annualVolume: string;
+      phone: string;
+      message: string;
+      submit: string;
+    };
   };
 }

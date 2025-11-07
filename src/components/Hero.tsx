@@ -49,46 +49,6 @@ export const Hero = ({ lang, t }: HeroProps) => {
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto">
             {t.hero.subtitle}
           </p>
-
-          {/* Audience Segmentation Badges */}
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.3 }}
-              className="px-6 py-3 rounded-full bg-primary/10 border border-primary/30 backdrop-blur-sm"
-            >
-              <span className="text-primary font-semibold">👨‍🎓 {t.hero.b2cSegment}</span>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4 }}
-              className="px-6 py-3 rounded-full bg-accent/10 border border-accent/30 backdrop-blur-sm"
-            >
-              <span className="text-accent font-semibold">💼 {t.hero.b2bSegment}</span>
-            </motion.div>
-          </div>
-
-          {/* Call to Action */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              onClick={handleConsultation}
-              size="lg"
-              className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_30px_rgba(16,185,129,0.5)] hover:shadow-[0_0_40px_rgba(16,185,129,0.7)] transition-all duration-300"
-            >
-              📞 {t.hero.cta}
-            </Button>
-            <Button
-              onClick={handleDownloadGuide}
-              size="lg"
-              variant="outline"
-              className="text-lg px-8 py-6 border-primary/50 hover:bg-primary/10 text-primary backdrop-blur-sm"
-            >
-              <Download className="w-5 h-5 mr-2" />
-              {t.hero.secondaryCta}
-            </Button>
-          </div>
         </motion.div>
 
         {/* Scroll Indicator */}

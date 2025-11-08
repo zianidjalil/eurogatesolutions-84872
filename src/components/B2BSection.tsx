@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { Building2, Users, TrendingUp, CheckCircle2 } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Language, Translation } from '@/types/translations';
 
 interface B2BSectionProps {
@@ -16,10 +15,6 @@ const iconMap: Record<number, any> = {
 };
 
 export const B2BSection = ({ lang, t }: B2BSectionProps) => {
-  const handleB2BContact = () => {
-    window.location.href = 'mailto:eurogate@outlook.fr?subject=Demande B2B - Partenariats Entreprises';
-  };
-
   return (
     <section id="b2b" className="py-20 bg-gradient-to-b from-background to-muted/30">
       <div className="container mx-auto px-4">
@@ -33,16 +28,9 @@ export const B2BSection = ({ lang, t }: B2BSectionProps) => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
             {t.b2b.title}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             {t.b2b.subtitle}
           </p>
-          <Button 
-            onClick={handleB2BContact}
-            size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-[0_0_30px_rgba(16,185,129,0.5)]"
-          >
-            {t.b2b.cta}
-          </Button>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
@@ -103,12 +91,6 @@ export const B2BSection = ({ lang, t }: B2BSectionProps) => {
                     Mentionnez: Type d'organisation, volume annuel, et décrivez votre projet
                   </p>
                 </div>
-                <Button 
-                  onClick={handleB2BContact}
-                  className="w-full bg-primary hover:bg-primary/90"
-                >
-                  {t.b2b.contactForm.submit}
-                </Button>
               </div>
             </CardContent>
           </Card>

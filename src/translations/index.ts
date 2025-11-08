@@ -166,7 +166,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       items: [
         {
           title: 'Partenariats Académiques',
-          description: 'Collaboration avec instituts de formation algériens (ex: Genius Training Institute) pour programmes de mobilité EU-Algérie',
+          description: 'Collaboration avec instituts de formation algériens (ex: Elea Formations) pour programmes de mobilité EU-Algérie',
           features: ['Programmes personnalisés de formation', 'Support administratif complet', 'Certification internationale']
         },
         {

@@ -64,7 +64,7 @@ export const Gallery = ({ lang, t }: GalleryProps) => {
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent"
         >
-          Galerie Roumanie
+          {t.gallery.title}
         </motion.h2>
 
         <motion.p
@@ -74,7 +74,7 @@ export const Gallery = ({ lang, t }: GalleryProps) => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto"
         >
-          Découvrez la beauté et la richesse culturelle de la Roumanie
+          {t.gallery.subtitle}
         </motion.p>
 
         {/* Gallery Grid */}

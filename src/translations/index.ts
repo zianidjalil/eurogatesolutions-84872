@@ -166,7 +166,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       items: [
         {
           title: 'Partenariats Académiques',
-          description: 'Collaboration avec instituts de formation algériens (ex: Elea Formations) pour programmes de mobilité EU-Algérie',
+          description: 'Collaboration avec instituts de formation algériens (ex: GTI, Elea Formations, MBI) pour programmes de mobilité EU-Algérie',
           features: ['Programmes personnalisés de formation', 'Support administratif complet', 'Certification internationale']
         },
         {
@@ -186,8 +186,26 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
         annualVolume: 'Volume annuel de stagiaires / employés',
         phone: 'Téléphone professionnel',
         message: 'Décrivez votre projet',
-        submit: 'Envoyer la demande'
-      }
+        submit: 'Envoyer la demande',
+        description: 'Pour une proposition commerciale personnalisée, contactez-nous directement :',
+        details: 'Mentionnez: Type d\'organisation, volume annuel, et décrivez votre projet',
+      },
+    },
+    gallery: {
+      title: 'Galerie Roumanie',
+      subtitle: 'Découvrez la beauté et la richesse culturelle de la Roumanie',
+    },
+    resources: {
+      pdfGuide: 'Envoyez-nous un e-mail et obtenez gratuitement votre guide PDF : « Le profil étudiant idéal pour étudier en Roumanie ».',
+      audioContent: 'Audio Content',
+    },
+    footer: {
+      privacy: {
+        title: 'Confidentialité',
+        paragraph1: 'En nous contactant par e-mail ou par téléphone, vos données ne seront utilisées qu\'après votre consentement exprès et uniquement pour répondre à votre demande, conformément à la loi algérienne n° 18-07.',
+        paragraph2: 'Nous ne collectons aucune donnée personnelle via ce site web. Si vous nous contactez par e-mail, votre message sera utilisé uniquement pour répondre à votre demande et supprimé suite à votre accord dans un délai de 24 Heures.',
+        paragraph3: 'Aucun cookie, outil d\'analyse ou dispositif de suivi n\'est utilisé.',
+      },
     },
   },
   ar: {
@@ -355,7 +373,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       items: [
         {
           title: 'الشراكات الأكاديمية',
-          description: 'التعاون مع معاهد التدريب الجزائرية لبرامج التنقل بين الاتحاد الأوروبي والجزائر',
+          description: 'التعاون مع معاهد التدريب الجزائرية (مثل: GTI، Elea Formations، MBI) لبرامج التنقل بين الاتحاد الأوروبي والجزائر',
           features: ['برامج تدريب مخصصة', 'دعم إداري كامل', 'شهادة دولية']
         },
         {
@@ -375,8 +393,26 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
         annualVolume: 'الحجم السنوي للمتدربين / الموظفين',
         phone: 'هاتف العمل',
         message: 'صف مشروعك',
-        submit: 'إرسال الطلب'
-      }
+        submit: 'إرسال الطلب',
+        description: 'للحصول على عرض تجاري مخصص، اتصل بنا مباشرة:',
+        details: 'اذكر: نوع المنظمة، الحجم السنوي، واشرح مشروعك',
+      },
+    },
+    gallery: {
+      title: 'معرض رومانيا',
+      subtitle: 'اكتشف جمال وغنى الثقافة الرومانية',
+    },
+    resources: {
+      pdfGuide: 'أرسل لنا بريدًا إلكترونيًا واحصل مجانًا على دليلك بصيغة PDF: "ملف الطالب المثالي للدراسة في رومانيا".',
+      audioContent: 'محتوى صوتي',
+    },
+    footer: {
+      privacy: {
+        title: 'الخصوصية',
+        paragraph1: 'بالاتصال بنا عبر البريد الإلكتروني أو الهاتف، لن تُستخدم بياناتك إلا بعد موافقتك الصريحة وفقط للرد على طلبك، وفقًا للقانون الجزائري رقم 18-07.',
+        paragraph2: 'نحن لا نجمع أي بيانات شخصية عبر هذا الموقع. إذا اتصلت بنا عبر البريد الإلكتروني، سيتم استخدام رسالتك فقط للرد على طلبك وحذفها بموافقتك خلال 24 ساعة.',
+        paragraph3: 'لا يتم استخدام ملفات تعريف الارتباط أو أدوات التحليل أو أجهزة التتبع.',
+      },
     },
   },
   en: {
@@ -544,7 +580,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       items: [
         {
           title: 'Academic Partnerships',
-          description: 'Collaboration with Algerian training institutes for EU-Algeria mobility programs',
+          description: 'Collaboration with Algerian training institutes (e.g., GTI, Elea Formations, MBI)',
           features: ['Customized training programs', 'Full administrative support', 'International certification']
         },
         {
@@ -564,8 +600,26 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
         annualVolume: 'Annual volume of trainees / employees',
         phone: 'Business phone',
         message: 'Describe your project',
-        submit: 'Submit request'
-      }
+        submit: 'Submit request',
+        description: 'For a personalized commercial proposal, contact us directly:',
+        details: 'Mention: Organization type, annual volume, and describe your project',
+      },
+    },
+    gallery: {
+      title: 'Romania Gallery',
+      subtitle: 'Discover the beauty and cultural richness of Romania',
+    },
+    resources: {
+      pdfGuide: 'Send us an email and get your free PDF guide: "The ideal student profile to study in Romania".',
+      audioContent: 'Audio Content',
+    },
+    footer: {
+      privacy: {
+        title: 'Privacy',
+        paragraph1: 'By contacting us by email or phone, your data will only be used after your express consent and only to respond to your request, in accordance with Algerian law No. 18-07.',
+        paragraph2: 'We do not collect any personal data through this website. If you contact us by email, your message will be used only to respond to your request and deleted with your agreement within 24 Hours.',
+        paragraph3: 'No cookies, analytics tools or tracking devices are used.',
+      },
     },
   },
 };

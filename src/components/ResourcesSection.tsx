@@ -1,8 +1,14 @@
 import { motion } from 'framer-motion';
 import { FileText, Mic } from 'lucide-react';
 import heroTagline from '@/assets/hero-tagline.png';
+import { Language, Translation } from '@/types/translations';
 
-export const ResourcesSection = () => {
+interface ResourcesSectionProps {
+  lang: Language;
+  t: Translation;
+}
+
+export const ResourcesSection = ({ lang, t }: ResourcesSectionProps) => {
   return (
     <section className="py-16 px-4 relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5">
       <div className="container mx-auto">
@@ -14,7 +20,7 @@ export const ResourcesSection = () => {
           className="max-w-4xl mx-auto mb-12 text-center"
         >
           <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-            Envoyez-nous un e-mail et obtenez gratuitement votre guide PDF : « Le profil étudiant idéal pour étudier en Roumanie ».
+            {t.resources.pdfGuide}
           </p>
           <div className="flex justify-center">
             <FileText className="w-16 h-16 text-primary animate-pulse" />
@@ -33,7 +39,7 @@ export const ResourcesSection = () => {
           className="max-w-4xl mx-auto mb-12"
         >
           <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-            Audio Content
+            {t.resources.audioContent}
           </h3>
           <div className="flex flex-col items-center gap-4">
             <Mic className="w-12 h-12 text-accent animate-pulse" />

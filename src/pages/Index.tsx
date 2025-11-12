@@ -31,7 +31,7 @@ const Index = () => {
         <Gallery lang={lang} t={t} />
         <B2BSection lang={lang} t={t} />
         <WhyUs lang={lang} t={t} />
-        <ResourcesSection />
+        <ResourcesSection lang={lang} t={t} />
         <Guarantees lang={lang} t={t} />
         <RefundPolicy lang={lang} t={t} />
         <FAQ lang={lang} t={t} />

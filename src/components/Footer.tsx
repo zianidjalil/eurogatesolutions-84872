@@ -1,4 +1,5 @@
 import { Language } from '@/types/translations';
+import { translations } from '@/translations';
 import algeriaFlag from '@/assets/algeria-flag-new.gif';
 import romaniaFlag from '@/assets/romania-flag-new.gif';
 import euFlag from '@/assets/eu-flag-new.gif';
@@ -16,19 +17,17 @@ export const Footer = ({ lang }: FooterProps) => {
         {/* Privacy Section */}
         <div className="max-w-4xl mx-auto mb-8">
           <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
-            Confidentialité
+            {translations[lang].footer.privacy.title}
           </h3>
           <div className="text-muted-foreground text-sm leading-relaxed space-y-3 text-center">
             <p>
-              En nous contactant par e-mail ou par téléphone, vos données ne seront utilisées qu'après votre consentement exprès et uniquement pour répondre à votre demande, conformément à la loi algérienne n° 18-07.
+              {translations[lang].footer.privacy.paragraph1}
             </p>
             <p>
-              Nous ne collectons aucune donnée personnelle via ce site web. Si vous nous contactez par e-mail, 
-              votre message sera utilisé uniquement pour répondre à votre demande et supprimé suite à votre accord dans un délai de{' '}
-              <span className="font-semibold text-foreground">24 Heures</span>.
+              {translations[lang].footer.privacy.paragraph2}
             </p>
             <p>
-              Aucun cookie, outil d'analyse ou dispositif de suivi n'est utilisé.
+              {translations[lang].footer.privacy.paragraph3}
             </p>
           </div>
         </div>

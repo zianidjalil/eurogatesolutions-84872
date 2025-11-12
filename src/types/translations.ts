@@ -92,6 +92,24 @@ export interface Translation {
       phone: string;
       message: string;
       submit: string;
+      description: string;
+      details: string;
+    };
+  };
+  gallery: {
+    title: string;
+    subtitle: string;
+  };
+  resources: {
+    pdfGuide: string;
+    audioContent: string;
+  };
+  footer: {
+    privacy: {
+      title: string;
+      paragraph1: string;
+      paragraph2: string;
+      paragraph3: string;
     };
   };
 }

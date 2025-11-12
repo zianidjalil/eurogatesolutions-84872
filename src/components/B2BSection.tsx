@@ -83,12 +83,12 @@ export const B2BSection = ({ lang, t }: B2BSectionProps) => {
             <CardContent>
               <div className="text-center space-y-4">
                 <p className="text-muted-foreground">
-                  Pour une proposition commerciale personnalisée, contactez-nous directement :
+                  {t.b2b.contactForm.description}
                 </p>
                 <div className="space-y-2">
                   <p className="font-semibold">📧 Email: eurogate@outlook.fr</p>
                   <p className="text-sm text-muted-foreground">
-                    Mentionnez: Type d'organisation, volume annuel, et décrivez votre projet
+                    {t.b2b.contactForm.details}
                   </p>
                 </div>
               </div>

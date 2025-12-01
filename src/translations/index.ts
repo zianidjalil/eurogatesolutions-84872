@@ -25,7 +25,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
         {
           name: 'Culture & Langue',
           duration: 'Gagnez l\'équivalent de 63,64 % de votre budget initial',
-          price: '',
+          price: 'Avec Seulement 14970 DA Par mois!',
           description: 'Immersion culturelle complète avec cours de langue roumaine intensifs pour une intégration réussie',
           features: [
             'Cours intensif de roumain A1 → A2 (niveau requis pour le visa)',
@@ -47,7 +47,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
         {
           name: 'VIP Total A à Z',
           duration: 'Sur mesure',
-          price: '',
+          price: 'Avec seulement 1150 €',
           description: 'Service premium tout compris de la demande de visa à l\'obtention du permis de séjour',
           features: [
             'Tout inclus : de la demande de visa à l\'obtention du permis de séjour',
@@ -166,7 +166,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       items: [
         {
           title: 'Partenariats Académiques',
-          description: 'Collaboration avec instituts, académie et centre privés de formation algériens (ex: Algérie Télécom, Skills Center, CREO Studio, GTI) pour programmes de mobilité EU-Algérie',
+          description: 'Collaboration avec instituts, académie et centre privés de formation algériens (ex: Skills Center, CREO Studio, GTI) pour programmes de mobilité EU-Algérie',
           features: ['Programmes personnalisés de formation', 'Support administratif complet', 'Certification internationale']
         },
         {
@@ -232,7 +232,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
         {
           name: 'الثقافة واللغة',
           duration: 'وفر ما يعادل 63,64% من ميزانيتك الأولية',
-          price: '',
+          price: 'بـ 14970 دج فقط شهريًا!',
           description: 'انغماس ثقافي كامل مع دورات مكثفة في اللغة الرومانية للاندماج الناجح',
           features: [
             'دورة مكثفة في اللغة الرومانية A1 → A2 (المستوى المطلوب للتأشيرة)',
@@ -254,7 +254,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
         {
           name: 'VIP الشامل من الألف إلى الياء',
           duration: 'حسب الطلب',
-          price: '',
+          price: 'بـ 1150 يورو فقط',
           description: 'خدمة متميزة شاملة من طلب التأشيرة إلى الحصول على تصريح الإقامة',
           features: [
             'شامل كليًا: من طلب التأشيرة إلى الحصول على تصريح الإقامة',
@@ -373,7 +373,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       items: [
         {
           title: 'الشراكات الأكاديمية',
-          description: 'التعاون مع معاهد، أكاديميات ومراكز تدريب خاصة جزائرية (مثل: Algérie Télécom، Skills Center، CREO Studio، GTI) لبرامج التنقل بين الاتحاد الأوروبي والجزائر',
+          description: 'التعاون مع معاهد، أكاديميات ومراكز تدريب خاصة جزائرية (مثل: Skills Center، CREO Studio، GTI) لبرامج التنقل بين الاتحاد الأوروبي والجزائر',
           features: ['برامج تدريب مخصصة', 'دعم إداري كامل', 'شهادة دولية']
         },
         {
@@ -439,7 +439,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
         {
           name: 'Culture & Language',
           duration: 'Save the equivalent of 63.64% of your initial budget',
-          price: '',
+          price: 'With Only 14970 DA Per month!',
           description: 'Complete cultural immersion with intensive Romanian language courses for successful integration',
           features: [
             'Intensive Romanian course A1 → A2 (required level for visa)',
@@ -461,7 +461,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
         {
           name: 'VIP Total A to Z',
           duration: 'Customized',
-          price: '',
+          price: 'With only 1150 €',
           description: 'Premium all-inclusive service from visa application to residence permit',
           features: [
             'All-inclusive: from visa application to residence permit',
@@ -580,7 +580,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       items: [
         {
           title: 'Academic Partnerships',
-          description: 'Collaboration with Algerian training institutes, academies and private training centers (e.g., Algérie Télécom, Skills Center, CREO Studio, GTI)',
+          description: 'Collaboration with Algerian training institutes, academies and private training centers (e.g., Skills Center, CREO Studio, GTI)',
           features: ['Customized training programs', 'Full administrative support', 'International certification']
         },
         {

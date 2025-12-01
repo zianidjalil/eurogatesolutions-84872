@@ -11,7 +11,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       b2b: 'Entreprises & Partenariats',
     },
     hero: {
-      title: 'Votre Avenir en Roumanie Commence Ici',
+      title: 'Votre Avenir en Roumanie Commence d\'ici',
       subtitle: 'Accompagnement premium pour vos études et votre immigration en Roumanie',
       cta: 'Réservez un appel gratuit',
       secondaryCta: 'Téléchargez notre guide Roumanie 2025',

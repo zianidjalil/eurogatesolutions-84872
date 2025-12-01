@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FileText, Mic } from 'lucide-react';
+import { Mic } from 'lucide-react';
 import heroTagline from '@/assets/hero-tagline.png';
 import { Language, Translation } from '@/types/translations';
 
@@ -12,23 +12,6 @@ export const ResourcesSection = ({ lang, t }: ResourcesSectionProps) => {
   return (
     <section className="py-16 px-4 relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5">
       <div className="container mx-auto">
-        {/* PDF Guide Notice */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-4xl mx-auto mb-12 text-center"
-        >
-          <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-            {t.resources.pdfGuide}
-          </p>
-          <div className="flex justify-center">
-            <FileText className="w-16 h-16 text-primary animate-pulse" />
-          </div>
-        </motion.div>
-
-        {/* Divider */}
-        <div className="border-t border-border my-12"></div>
 
         {/* Audio Content */}
         <motion.div 

@@ -166,7 +166,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       items: [
         {
           title: 'Partenariats Académiques',
-          description: 'Collaboration avec instituts de formation algériens (ex: GTI, Elea Formations, MBI) pour programmes de mobilité EU-Algérie',
+          description: 'Collaboration avec instituts, académie et centre privés de formation algériens (ex: Algérie Télécom, Skills Center, CREO Studio, GTI) pour programmes de mobilité EU-Algérie',
           features: ['Programmes personnalisés de formation', 'Support administratif complet', 'Certification internationale']
         },
         {
@@ -373,7 +373,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       items: [
         {
           title: 'الشراكات الأكاديمية',
-          description: 'التعاون مع معاهد التدريب الجزائرية (مثل: GTI، Elea Formations، MBI) لبرامج التنقل بين الاتحاد الأوروبي والجزائر',
+          description: 'التعاون مع معاهد، أكاديميات ومراكز تدريب خاصة جزائرية (مثل: Algérie Télécom، Skills Center، CREO Studio، GTI) لبرامج التنقل بين الاتحاد الأوروبي والجزائر',
           features: ['برامج تدريب مخصصة', 'دعم إداري كامل', 'شهادة دولية']
         },
         {
@@ -580,7 +580,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       items: [
         {
           title: 'Academic Partnerships',
-          description: 'Collaboration with Algerian training institutes (e.g., GTI, Elea Formations, MBI)',
+          description: 'Collaboration with Algerian training institutes, academies and private training centers (e.g., Algérie Télécom, Skills Center, CREO Studio, GTI)',
           features: ['Customized training programs', 'Full administrative support', 'International certification']
         },
         {

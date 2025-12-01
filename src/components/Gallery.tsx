@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Language, Translation } from '@/types/translations';
+import marketingChoice from '@/assets/marketing-choice.png';
 import P1 from '@/assets/gallery/P1.png';
 import P2 from '@/assets/gallery/P2.png';
 import P3 from '@/assets/gallery/P3.png';
@@ -57,6 +58,21 @@ export const Gallery = ({ lang, t }: GalleryProps) => {
       </div>
 
       <div className="container mx-auto relative z-10">
+        {/* Marketing Choice Image with Shake Animation */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex justify-center mb-12"
+        >
+          <img 
+            src={marketingChoice} 
+            alt="Ton Choix - Marketing" 
+            className="w-full max-w-3xl rounded-lg shadow-2xl shake-animation"
+          />
+        </motion.div>
+
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -125,12 +141,25 @@ export const Gallery = ({ lang, t }: GalleryProps) => {
 
       {/* CSS for reduced motion preference */}
       <style>{`
+        @keyframes shake {
+          0%, 100% { transform: translateX(0); }
+          10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+          20%, 40%, 60%, 80% { transform: translateX(10px); }
+        }
+
+        .shake-animation {
+          animation: shake 2s ease-in-out infinite;
+        }
+
         @media (prefers-reduced-motion: reduce) {
           .image-item {
             animation: none !important;
           }
           .image-item * {
             transition: none !important;
+          }
+          .shake-animation {
+            animation: none !important;
           }
         }
       `}</style>

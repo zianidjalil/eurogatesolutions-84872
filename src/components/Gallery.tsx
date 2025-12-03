@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Language, Translation } from '@/types/translations';
 import marketingChoice from '@/assets/marketing-choice.png';
+import romaniaFlagBg from '@/assets/romania-flag-bg.gif';
 import P1 from '@/assets/gallery/P1.png';
 import P2 from '@/assets/gallery/P2.png';
 import P3 from '@/assets/gallery/P3.png';
@@ -51,8 +52,22 @@ export const Gallery = ({ lang, t }: GalleryProps) => {
 
   return (
     <section className="py-24 px-4 relative overflow-hidden">
+      {/* Romanian Flag Background Wallpaper */}
+      <div 
+        className="absolute inset-0 opacity-20 z-0"
+        style={{
+          backgroundImage: `url(${romaniaFlagBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      />
+      
+      {/* Dark overlay for better readability */}
+      <div className="absolute inset-0 bg-background/70 z-0" />
+
       {/* Decorative Elements */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 z-0">
         <div className="absolute top-20 left-10 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
       </div>

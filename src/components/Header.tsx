@@ -36,12 +36,9 @@ export const Header = ({ lang, onLanguageChange, t }: HeaderProps) => {
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-3"
+            className="flex items-center"
           >
-            <img src={logo} alt="EUROGATE Logo" className="h-10 w-10 object-contain" />
-            <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              EUROGATE
-            </span>
+            <img src={logo} alt="EUROGATE Logo" className="h-12 object-contain" />
           </motion.div>
 
           {/* Desktop Menu */}

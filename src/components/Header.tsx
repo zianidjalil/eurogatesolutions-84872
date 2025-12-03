@@ -35,7 +35,16 @@ export const Header = ({ lang, onLanguageChange, t }: HeaderProps) => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <motion.div
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.1 }}
+            animate={{ 
+              scale: [1, 1.05, 1],
+              rotate: [0, 2, -2, 0]
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
             className="flex items-center"
           >
             <img src={logo} alt="EUROGATE Logo" className="h-12 object-contain" />

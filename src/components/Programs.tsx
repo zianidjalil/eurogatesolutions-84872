@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Language, Translation } from '@/types/translations';
 import programsHero from '@/assets/programs-hero.png';
+import discountBadge from '@/assets/discount-badge.png';
 
 interface ProgramsProps {
   lang: Language;
@@ -74,9 +75,12 @@ export const Programs = ({ lang, t }: ProgramsProps) => {
                   
                   {/* Populaire badge for first program */}
                   {index === 0 && (
-                    <Badge className="absolute top-4 right-4 z-20 bg-primary text-primary-foreground animate-pulse">
-                      {lang === 'fr' ? 'POPULAIRE' : 'شائع'}
-                    </Badge>
+                    <div className="absolute top-4 right-4 z-20 flex flex-col items-end gap-2">
+                      <Badge className="bg-primary text-primary-foreground animate-pulse">
+                        {lang === 'fr' ? 'POPULAIRE' : 'شائع'}
+                      </Badge>
+                      <img src={discountBadge} alt="Discount" className="w-20 h-20 object-contain" />
+                    </div>
                   )}
                   
                   <CardHeader className="relative z-10">

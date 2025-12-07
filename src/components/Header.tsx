@@ -13,24 +13,6 @@ interface HeaderProps {
 
 export const Header = ({ lang, onLanguageChange, t }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [displayedText, setDisplayedText] = useState('');
-  const fullText = "Votre Avenir en Roumanie Commence d'ici — Accompagnement premium pour vos études et votre immigration en Roumanie";
-
-  useEffect(() => {
-    let i = 0;
-    setDisplayedText('');
-    
-    const typeInterval = setInterval(() => {
-      if (i < fullText.length) {
-        setDisplayedText(fullText.slice(0, i + 1));
-        i++;
-      } else {
-        clearInterval(typeInterval);
-      }
-    }, 100);
-
-    return () => clearInterval(typeInterval);
-  }, []);
 
   const menuItems = [
     { key: 'programs', href: '#programs' },
@@ -68,11 +50,6 @@ export const Header = ({ lang, onLanguageChange, t }: HeaderProps) => {
               <img src={logo} alt="EUROGATE Logo" className="h-12 object-contain" />
             </motion.div>
             
-            {/* Typewriter Text */}
-            <div className="hidden lg:flex items-center font-mono font-bold text-sm text-foreground max-w-md">
-              <span className="line-clamp-2">{displayedText}</span>
-              <span className="animate-pulse ml-0.5">|</span>
-            </div>
           </div>
 
           {/* Desktop Menu */}

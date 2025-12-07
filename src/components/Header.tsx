@@ -15,7 +15,7 @@ export const Header = ({ lang, onLanguageChange, t }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [displayedText, setDisplayedText] = useState('');
   
-  const fullText = "Votre Avenir en Roumanie Commence d'ici — Accompagnement premium pour vos études et votre immigration en Roumanie";
+  const fullText = "La Roumanie, membre de l'Union Européenne depuis 2007, s'est imposée comme un vivier de talents qualifiés";
 
   useEffect(() => {
     let index = 0;

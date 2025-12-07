@@ -13,13 +13,23 @@ interface HeaderProps {
 
 export const Header = ({ lang, onLanguageChange, t }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [showSecondText, setShowSecondText] = useState(false);
+  const [displayedText, setDisplayedText] = useState('');
+  const fullText = "eEUROGATE SOLUTIONS";
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setShowSecondText(prev => !prev);
-    }, 3000);
-    return () => clearInterval(interval);
+    let i = 0;
+    setDisplayedText('');
+    
+    const typeInterval = setInterval(() => {
+      if (i < fullText.length) {
+        setDisplayedText(fullText.slice(0, i + 1));
+        i++;
+      } else {
+        clearInterval(typeInterval);
+      }
+    }, 100);
+
+    return () => clearInterval(typeInterval);
   }, []);
 
   const menuItems = [
@@ -58,20 +68,10 @@ export const Header = ({ lang, onLanguageChange, t }: HeaderProps) => {
               <img src={logo} alt="EUROGATE Logo" className="h-12 object-contain" />
             </motion.div>
             
-            {/* Animated Text */}
-            <div className="relative h-8 overflow-hidden">
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={showSecondText ? 'second' : 'first'}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5 }}
-                  className="absolute whitespace-nowrap font-bold text-lg text-foreground"
-                >
-                  {showSecondText ? 'EUROGATE SOLUTIONS' : 'CURSOS'}
-                </motion.span>
-              </AnimatePresence>
+            {/* Typewriter Text */}
+            <div className="flex items-center font-mono font-bold text-lg text-foreground whitespace-nowrap">
+              <span>{displayedText}</span>
+              <span className="animate-pulse ml-0.5">|</span>
             </div>
           </div>
 

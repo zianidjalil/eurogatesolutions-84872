@@ -14,7 +14,7 @@ interface HeaderProps {
 export const Header = ({ lang, onLanguageChange, t }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [displayedText, setDisplayedText] = useState('');
-  const fullText = "eEUROGATE SOLUTIONS";
+  const fullText = "Votre Avenir en Roumanie Commence d'ici — Accompagnement premium pour vos études et votre immigration en Roumanie";
 
   useEffect(() => {
     let i = 0;
@@ -69,8 +69,8 @@ export const Header = ({ lang, onLanguageChange, t }: HeaderProps) => {
             </motion.div>
             
             {/* Typewriter Text */}
-            <div className="flex items-center font-mono font-bold text-lg text-foreground whitespace-nowrap">
-              <span>{displayedText}</span>
+            <div className="hidden lg:flex items-center font-mono font-bold text-sm text-foreground max-w-md">
+              <span className="line-clamp-2">{displayedText}</span>
               <span className="animate-pulse ml-0.5">|</span>
             </div>
           </div>

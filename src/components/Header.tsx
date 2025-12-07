@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Globe } from 'lucide-react';
 import { Button } from './ui/button';
@@ -13,6 +13,14 @@ interface HeaderProps {
 
 export const Header = ({ lang, onLanguageChange, t }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showSecondText, setShowSecondText] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowSecondText(prev => !prev);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   const menuItems = [
     { key: 'programs', href: '#programs' },
@@ -33,22 +41,39 @@ export const Header = ({ lang, onLanguageChange, t }: HeaderProps) => {
     >
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <motion.div
-            whileHover={{ scale: 1.1 }}
-            animate={{ 
-              scale: [1, 1.05, 1],
-              rotate: [0, 2, -2, 0]
-            }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-            className="flex items-center"
-          >
-            <img src={logo} alt="EUROGATE Logo" className="h-12 object-contain" />
-          </motion.div>
+          {/* Animated Logo */}
+          <div className="flex items-center gap-3">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              animate={{ 
+                scale: [1, 1.05, 1],
+                rotate: [0, 2, -2, 0]
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            >
+              <img src={logo} alt="EUROGATE Logo" className="h-12 object-contain" />
+            </motion.div>
+            
+            {/* Animated Text */}
+            <div className="relative h-8 overflow-hidden">
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={showSecondText ? 'second' : 'first'}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.5 }}
+                  className="absolute whitespace-nowrap font-bold text-lg text-foreground"
+                >
+                  {showSecondText ? 'EUROGATE SOLUTIONS' : 'CURSOS'}
+                </motion.span>
+              </AnimatePresence>
+            </div>
+          </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">

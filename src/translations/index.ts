@@ -166,7 +166,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       items: [
         {
           title: 'Partenariats Académiques',
-          description: 'Collaboration avec instituts, académie et centre privés de formation algériens (ex: Skills Center, CREO Studio, GTI) pour programmes de mobilité EU-Algérie',
+          description: 'Collaboration avec instituts, académie et centre privés de formation algériens, des auto-entrepreneurs pour programmes d\'accompagnement, upskilling et reskilling',
           features: ['Programmes personnalisés de formation', 'Support administratif complet', 'Certification internationale']
         },
         {

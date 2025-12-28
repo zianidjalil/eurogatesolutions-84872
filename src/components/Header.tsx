@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Globe } from 'lucide-react';
 import { Button } from './ui/button';
@@ -13,22 +13,6 @@ interface HeaderProps {
 
 export const Header = ({ lang, onLanguageChange, t }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [displayedText, setDisplayedText] = useState('');
-  
-  const fullText = "La Roumanie, membre de l'Union Européenne depuis 2007, s'est imposée comme un vivier de talents qualifiés";
-
-  useEffect(() => {
-    let index = 0;
-    const interval = setInterval(() => {
-      if (index <= fullText.length) {
-        setDisplayedText(fullText.slice(0, index));
-        index++;
-      } else {
-        clearInterval(interval);
-      }
-    }, 50);
-    return () => clearInterval(interval);
-  }, []);
 
   const menuItems = [
     { key: 'programs', href: '#programs' },
@@ -65,14 +49,6 @@ export const Header = ({ lang, onLanguageChange, t }: HeaderProps) => {
             >
               <img src={logo} alt="EUROGATE Logo" className="h-12 object-contain" />
             </motion.div>
-          </div>
-
-          {/* Typewriter Text - Center */}
-          <div className="hidden lg:flex flex-1 justify-center px-4">
-            <span className="text-sm text-accent font-medium max-w-lg text-center">
-              {displayedText}
-              <span className="animate-pulse">|</span>
-            </span>
           </div>
 
           {/* Desktop Menu */}

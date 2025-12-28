@@ -195,6 +195,13 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       title: 'Galerie Roumanie',
       subtitle: 'Découvrez la beauté et la richesse culturelle de la Roumanie',
     },
+    skillsCenter: {
+      title: 'Partenariat Skills Center',
+      subtitle: 'Notre partenaire stratégique pour l\'excellence de la formation en Algérie',
+      description: 'Skills Center est notre partenaire algérien de confiance, fournissant des installations de formation de classe mondiale et une expertise pour les programmes d\'amélioration et de reconversion des compétences. Ensemble, nous offrons des solutions éducatives complètes qui préparent les étudiants et les professionnels à réussir sur le marché européen.',
+      imageCaption1: 'Installations de formation modernes',
+      imageCaption2: 'Environnement d\'apprentissage de pointe',
+    },
     resources: {
       pdfGuide: 'Envoyez-nous un e-mail et obtenez gratuitement votre guide PDF : « Le profil étudiant idéal pour étudier en Roumanie ».',
       audioContent: 'Audio Content',
@@ -402,6 +409,13 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       title: 'معرض رومانيا',
       subtitle: 'اكتشف جمال وغنى الثقافة الرومانية',
     },
+    skillsCenter: {
+      title: 'شراكة سكيلز سنتر',
+      subtitle: 'شريكنا الاستراتيجي للتميز في التدريب في الجزائر',
+      description: 'سكيلز سنتر هو شريكنا الجزائري الموثوق، الذي يوفر مرافق تدريب عالمية المستوى وخبرة لبرامج تطوير المهارات وإعادة التأهيل. معًا، نقدم حلولاً تعليمية شاملة تعد الطلاب والمهنيين للنجاح في السوق الأوروبية.',
+      imageCaption1: 'مرافق تدريب حديثة',
+      imageCaption2: 'بيئة تعلم متطورة',
+    },
     resources: {
       pdfGuide: 'أرسل لنا بريدًا إلكترونيًا واحصل مجانًا على دليلك بصيغة PDF: "ملف الطالب المثالي للدراسة في رومانيا".',
       audioContent: 'محتوى صوتي',
@@ -608,6 +622,13 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
     gallery: {
       title: 'Romania Gallery',
       subtitle: 'Discover the beauty and cultural richness of Romania',
+    },
+    skillsCenter: {
+      title: 'Skills Center Partnership',
+      subtitle: 'Our strategic partner for training excellence in Algeria',
+      description: 'Skills Center is our trusted Algerian partner, providing world-class training facilities and expertise for upskilling and reskilling programs. Together, we deliver comprehensive educational solutions that prepare students and professionals for success in the European market.',
+      imageCaption1: 'Modern Training Facilities',
+      imageCaption2: 'State-of-the-Art Learning Environment',
     },
     resources: {
       pdfGuide: 'Send us an email and get your free PDF guide: "The ideal student profile to study in Romania".',

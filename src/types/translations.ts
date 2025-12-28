@@ -100,6 +100,13 @@ export interface Translation {
     title: string;
     subtitle: string;
   };
+  skillsCenter?: {
+    title: string;
+    subtitle: string;
+    description: string;
+    imageCaption1: string;
+    imageCaption2: string;
+  };
   resources: {
     pdfGuide: string;
     audioContent: string;

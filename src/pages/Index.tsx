@@ -17,8 +17,8 @@ import { translations } from '@/translations';
 import { Language } from '@/types/translations';
 
 const Index = () => {
-  const [lang, setLang] = useState<Language>('fr');
-  const t = translations[lang] || translations['fr'];
+  const [lang, setLang] = useState<Language>('en');
+  const t = translations[lang] || translations['en'];
 
   return (
     <div className="min-h-screen bg-background text-foreground relative">

@@ -3,6 +3,7 @@ import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { Programs } from '@/components/Programs';
 import { Gallery } from '@/components/Gallery';
+import { SkillsCenterPartnership } from '@/components/SkillsCenterPartnership';
 import { B2BSection } from '@/components/B2BSection';
 import { WhyUs } from '@/components/WhyUs';
 import { ResourcesSection } from '@/components/ResourcesSection';
@@ -29,6 +30,7 @@ const Index = () => {
         <Hero lang={lang} t={t} />
         <Programs lang={lang} t={t} />
         <Gallery lang={lang} t={t} />
+        <SkillsCenterPartnership lang={lang} t={t} />
         <B2BSection lang={lang} t={t} />
         <WhyUs lang={lang} t={t} />
         <ResourcesSection lang={lang} t={t} />

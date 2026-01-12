@@ -65,17 +65,6 @@ export const Contact = ({ lang, t }: ContactProps) => {
                   </div>
                   <span className="text-xs text-muted-foreground">WhatsApp</span>
                 </a>
-                <a 
-                  href="https://t.me/+213553725639" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center gap-2 hover:scale-110 transition-transform duration-300"
-                >
-                  <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
-                    <MessageCircle className="w-6 h-6 text-blue-500" />
-                  </div>
-                  <span className="text-xs text-muted-foreground">Telegram</span>
-                </a>
               </div>
             </motion.div>
           </div>

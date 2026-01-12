@@ -75,7 +75,7 @@ export const Programs = ({ lang, t }: ProgramsProps) => {
                   {/* Populaire badge for first program */}
                   {index === 0 && (
                     <Badge className="absolute top-4 right-4 z-20 bg-primary text-primary-foreground animate-pulse">
-                      {lang === 'fr' ? 'POPULAIRE' : 'شائع'}
+                      {lang === 'fr' ? 'POPULAIRE' : 'Popular'}
                     </Badge>
                   )}
                   

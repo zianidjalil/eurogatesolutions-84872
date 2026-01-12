@@ -625,7 +625,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
     },
     skillsCenter: {
       title: 'Skills Center Partnership',
-      subtitle: 'Our strategic partner for training excellence in Algeria',
+      subtitle: 'Our strategic partner for training excellence in Algeria (100% free = Zero DZD)',
       description: 'Skills Center is our trusted Algerian partner, providing world-class training facilities and expertise for upskilling and reskilling programs. Together, we deliver comprehensive educational solutions that prepare students and professionals for success in the European market.',
       imageCaption1: 'Modern Training Facilities',
       imageCaption2: 'State-of-the-Art Learning Environment',

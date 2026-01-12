@@ -594,7 +594,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
       items: [
         {
           title: 'Academic Partnerships',
-          description: 'Collaboration with Algerian training institutes, academies and private training centers (e.g., Skills Center, CREO Studio, GTI)',
+          description: 'Collaboration with Algerian training institutes, academies and private training centers',
           features: ['Customized training programs', 'Full administrative support', 'International certification']
         },
         {

@@ -440,7 +440,7 @@ export const translations: Record<'fr' | 'ar' | 'en', Translation> = {
     },
     hero: {
       title: 'Your Future in Romania Starts Here',
-      subtitle: 'Premium support for your studies and immigration to Romania',
+      subtitle: 'Premium support for your studies and career in Romania',
       cta: 'Book a free call',
       secondaryCta: 'Download Romania 2025 Guide',
       b2cSegment: 'For students & individuals',

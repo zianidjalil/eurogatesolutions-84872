@@ -2,82 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    /* EUROGATE Matrix Theme - Black Background with Green Accents */
-    --background: 0 0% 5%;
-    --foreground: 120 100% 95%;
+    /* Portfolio Dark Theme */
+    --background: 240 6% 4%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 120 100% 95%;
+    --card: 240 5% 7%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 120 100% 95%;
+    --popover: 240 5% 7%;
+    --popover-foreground: 0 0% 100%;
 
-    /* Matrix Green Primary */
-    --primary: 120 100% 40%;
-    --primary-foreground: 0 0% 5%;
-    
-    /* Dark Matrix Green Secondary */
-    --secondary: 120 80% 25%;
-    --secondary-foreground: 120 100% 95%;
+    /* Blue Accent */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 120 50% 60%;
+    --secondary: 240 4% 12%;
+    --secondary-foreground: 0 0% 100%;
 
-    /* Bright Matrix Green Accent */
-    --accent: 120 100% 50%;
-    --accent-foreground: 0 0% 5%;
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 120 100% 95%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
 
-    --border: 120 50% 20%;
-    --input: 0 0% 12%;
-    --ring: 120 100% 40%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --radius: 0.75rem;
-    
-    /* Matrix Green Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(120, 100%, 40%) 0%, hsl(120, 80%, 25%) 100%);
-    --gradient-overlay: linear-gradient(180deg, hsla(120, 100%, 40%, 0.1) 0%, transparent 100%);
-    --gradient-dark: linear-gradient(180deg, hsla(0, 0%, 5%, 0.8) 0%, hsla(0, 0%, 5%, 0.95) 100%);
-    
-    /* Shadows */
-    --shadow-glow: 0 0 60px hsla(120, 100%, 40%, 0.4);
-    --shadow-elegant: 0 20px 60px hsla(120, 100%, 40%, 0.2);
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.5rem;
   }
 }
 
 @layer base {
   * {
     @apply border-border;
-    cursor: url('/stethoscope-cursor.png'), auto;
   }
 
   body {
     @apply bg-background text-foreground;
   }
-  
-  button, a, input, select, textarea {
-    cursor: url('/stethoscope-cursor.png'), pointer;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@keyframes gradient {
-  0%, 100% {
-    background-position: 0% 50%;
+@keyframes bounce-scroll {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
   }
-  50% {
-    background-position: 100% 50%;
+  40% {
+    transform: translateY(-10px);
   }
-}
-
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient 3s ease infinite;
+  60% {
+    transform: translateY(-5px);
+  }
 }

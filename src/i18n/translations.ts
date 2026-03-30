@@ -90,8 +90,8 @@ export const translations = {
     about: {
       label: 'À propos',
       title: "Du Coût-Efficacité à l'Actif-Valeur",
-      p1: "Je découvre des opportunités cachées dans chaque défi commercial : j'étudie, j'analyse, puis je recentre l'attention de l'efficacité des coûts vers l'actif-valeur grâce à une compréhension claire de la Business Intelligence.",
-      p2: "Je détiens un portefeuille clients B2B en Pologne, Pays-Bas et France sous structure PFA et maintiens un écosystème de réseautage opérationnel.",
+      p1: "Basé et opérationnel depuis Bucarest, Roumanie, je découvre des opportunités cachées dans chaque défi commercial : j'étudie, j'analyse, puis je recentre l'attention de l'efficacité des coûts vers l'actif-valeur grâce à une compréhension claire de la Business Intelligence.",
+      p2: "Je détiens un portefeuille clients B2B en Roumanie, Pologne, Pays-Bas et France sous structure PFA et maintiens un écosystème de réseautage opérationnel.",
       p3: "Parcours : Pharma | Spécialiste Expérience Client (CX) | Immobilier | Langage Corporel Digital | Affiliation & E-commerce | CRM | E-learning | Gamification & Outils BI",
     },
     services: {

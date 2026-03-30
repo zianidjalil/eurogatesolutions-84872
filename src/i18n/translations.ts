@@ -55,7 +55,7 @@ export const translations = {
         {
           date: '14 Years',
           title: 'Sales & CX Specialist',
-          company: 'European Market — Poland, Netherlands, France',
+          company: 'European Market — Romania, Poland, Netherlands, France',
           description: 'D2D, TeleSales, and Closing across B2C and B2B sectors. Polyglot customer experience specialist leveraging digital body language in pharma, real estate, e-commerce, and CRM.',
         },
       ],

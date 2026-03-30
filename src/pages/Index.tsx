@@ -111,7 +111,13 @@ const Index = () => {
         <div className="max-w-[1100px] mx-auto">
           <FadeIn>
             <div className="relative rounded-2xl overflow-hidden border border-border/50 shadow-2xl shadow-primary/10 group">
-              <img src={crossBorderMap} alt="Cross-Border Sales Intermediation" className="w-full h-auto block" />
+              <motion.img
+                src={crossBorderMap}
+                alt="Cross-Border Sales Intermediation"
+                className="w-full h-auto block"
+                animate={{ scale: [1, 1.08, 1], x: ['0%', '1%', '-1%', '0%'] }}
+                transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
+              />
               
               {/* Shimmer light that flows across the arrows */}
               <motion.div

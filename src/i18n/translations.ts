@@ -20,8 +20,8 @@ export const translations = {
     about: {
       label: 'About Me',
       title: 'From Cost-Efficiency to Value-Asset',
-      p1: 'I uncover hidden opportunities within every business challenge: I study, analyze, and then shift the focus from cost-efficiency to value-asset through a clear understanding of Business Intelligence.',
-      p2: 'I hold a B2B clients portfolio across Poland, Netherlands & France under PFA structure and maintain an operational networking ecosystem.',
+      p1: 'Based and operational from Bucharest, Romania, I uncover hidden opportunities within every business challenge: I study, analyze, and then shift the focus from cost-efficiency to value-asset through a clear understanding of Business Intelligence.',
+      p2: 'I hold a B2B clients portfolio across Romania, Poland, Netherlands & France under PFA structure and maintain an operational networking ecosystem.',
       p3: 'Background: Pharma | Customer Experience Specialist (CX) | Real Estate | Digital Body Language | Affiliate & E-commerce | CRM | E-learning | Gamification & BI Tools',
     },
     services: {

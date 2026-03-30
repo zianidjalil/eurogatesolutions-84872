@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Linkedin, Github, ChevronDown, Menu, X, Globe, Briefcase, GraduationCap, Brain } from 'lucide-react';
 import profileImg from '@/assets/profile.jpg';
+import crossBorderMap from '@/assets/cross-border-map.jpg';
 import { translations, Lang } from '@/i18n/translations';
 
 const skillsList = [
@@ -105,7 +106,98 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About */}
+      {/* Cross-Border Map */}
+      <section className="relative py-20 px-6 overflow-hidden">
+        <div className="max-w-[1100px] mx-auto">
+          <FadeIn>
+            <div className="relative rounded-2xl overflow-hidden border border-border/50 shadow-2xl shadow-primary/10 group">
+              <img src={crossBorderMap} alt="Cross-Border Sales Intermediation" className="w-full h-auto block" />
+              
+              {/* Animated arrow overlays */}
+              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+                {/* Canada to Romania - golden arc */}
+                <defs>
+                  <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#D4A843" stopOpacity="0" />
+                    <stop offset="50%" stopColor="#F5D77A" stopOpacity="0.9" />
+                    <stop offset="100%" stopColor="#D4A843" stopOpacity="0" />
+                  </linearGradient>
+                  <linearGradient id="red-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#FF4444" stopOpacity="0" />
+                    <stop offset="50%" stopColor="#FF6666" stopOpacity="0.8" />
+                    <stop offset="100%" stopColor="#FF4444" stopOpacity="0" />
+                  </linearGradient>
+                  <filter id="glow">
+                    <feGaussianBlur stdDeviation="3" result="blur" />
+                    <feMerge>
+                      <feMergeNode in="blur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                {/* Animated flowing dots along paths */}
+                {[
+                  { path: "M 200,350 Q 400,150 620,380", delay: 0, color: "gold-grad" },
+                  { path: "M 420,320 Q 520,280 610,370", delay: 0.5, color: "gold-grad" },
+                  { path: "M 440,340 Q 530,300 615,375", delay: 1.0, color: "gold-grad" },
+                  { path: "M 460,300 Q 540,260 620,365", delay: 1.5, color: "gold-grad" },
+                  { path: "M 480,350 Q 550,310 625,380", delay: 2.0, color: "gold-grad" },
+                  { path: "M 700,350 Q 720,400 750,380", delay: 0.3, color: "red-grad" },
+                  { path: "M 710,340 Q 740,420 760,400", delay: 0.8, color: "red-grad" },
+                  { path: "M 720,330 Q 750,380 770,370", delay: 1.3, color: "red-grad" },
+                ].map((arrow, i) => (
+                  <g key={i}>
+                    {/* Glowing path */}
+                    <motion.path
+                      d={arrow.path}
+                      fill="none"
+                      stroke={`url(#${arrow.color})`}
+                      strokeWidth="2"
+                      filter="url(#glow)"
+                      initial={{ pathLength: 0, opacity: 0 }}
+                      animate={{ pathLength: [0, 1, 1, 0], opacity: [0, 0.8, 0.8, 0] }}
+                      transition={{
+                        duration: 3,
+                        delay: arrow.delay,
+                        repeat: Infinity,
+                        repeatDelay: 1,
+                        ease: "easeInOut",
+                      }}
+                    />
+                    {/* Moving dot */}
+                    <motion.circle
+                      r="4"
+                      fill={arrow.color === 'red-grad' ? '#FF6666' : '#F5D77A'}
+                      filter="url(#glow)"
+                    >
+                      <animateMotion
+                        dur={`${3 + arrow.delay}s`}
+                        repeatCount="indefinite"
+                        begin={`${arrow.delay}s`}
+                        path={arrow.path}
+                      />
+                    </motion.circle>
+                  </g>
+                ))}
+
+                {/* Pulsing destination node - Romania */}
+                <motion.circle
+                  cx="620" cy="380" r="6"
+                  fill="#F5D77A"
+                  filter="url(#glow)"
+                  animate={{ r: [6, 10, 6], opacity: [1, 0.5, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                />
+              </svg>
+
+              {/* Vignette overlay */}
+              <div className="absolute inset-0 pointer-events-none" style={{ boxShadow: 'inset 0 0 80px rgba(0,0,0,0.5)' }} />
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       <section id="about" className="py-24 px-6 max-w-[1200px] mx-auto">
         <FadeIn>
           <div className="mb-16">

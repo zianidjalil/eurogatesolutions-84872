@@ -20,8 +20,8 @@ export const translations = {
     about: {
       label: 'About Me',
       title: 'From Cost-Efficiency to Value-Asset',
-      p1: 'I uncover hidden opportunities within every business challenge: I study, analyze, and then shift the focus from cost-efficiency to value-asset through a clear understanding of Business Intelligence.',
-      p2: 'I hold a B2B clients portfolio across Poland, Netherlands & France under PFA structure and maintain an operational networking ecosystem.',
+      p1: 'Based and operational from Bucharest, Romania, I uncover hidden opportunities within every business challenge: I study, analyze, and then shift the focus from cost-efficiency to value-asset through a clear understanding of Business Intelligence.',
+      p2: 'I hold a B2B clients portfolio across Romania, Poland, Netherlands & France under PFA structure and maintain an operational networking ecosystem.',
       p3: 'Background: Pharma | Customer Experience Specialist (CX) | Real Estate | Digital Body Language | Affiliate & E-commerce | CRM | E-learning | Gamification & BI Tools',
     },
     services: {
@@ -55,7 +55,7 @@ export const translations = {
         {
           date: '14 Years',
           title: 'Sales & CX Specialist',
-          company: 'European Market — Poland, Netherlands, France',
+          company: 'European Market — Romania, Poland, Netherlands, France',
           description: 'D2D, TeleSales, and Closing across B2C and B2B sectors. Polyglot customer experience specialist leveraging digital body language in pharma, real estate, e-commerce, and CRM.',
         },
       ],
@@ -90,8 +90,8 @@ export const translations = {
     about: {
       label: 'À propos',
       title: "Du Coût-Efficacité à l'Actif-Valeur",
-      p1: "Je découvre des opportunités cachées dans chaque défi commercial : j'étudie, j'analyse, puis je recentre l'attention de l'efficacité des coûts vers l'actif-valeur grâce à une compréhension claire de la Business Intelligence.",
-      p2: "Je détiens un portefeuille clients B2B en Pologne, Pays-Bas et France sous structure PFA et maintiens un écosystème de réseautage opérationnel.",
+      p1: "Basé et opérationnel depuis Bucarest, Roumanie, je découvre des opportunités cachées dans chaque défi commercial : j'étudie, j'analyse, puis je recentre l'attention de l'efficacité des coûts vers l'actif-valeur grâce à une compréhension claire de la Business Intelligence.",
+      p2: "Je détiens un portefeuille clients B2B en Roumanie, Pologne, Pays-Bas et France sous structure PFA et maintiens un écosystème de réseautage opérationnel.",
       p3: "Parcours : Pharma | Spécialiste Expérience Client (CX) | Immobilier | Langage Corporel Digital | Affiliation & E-commerce | CRM | E-learning | Gamification & Outils BI",
     },
     services: {
@@ -125,7 +125,7 @@ export const translations = {
         {
           date: '14 Ans',
           title: 'Spécialiste Ventes & CX',
-          company: 'Marché Européen — Pologne, Pays-Bas, France',
+          company: 'Marché Européen — Roumanie, Pologne, Pays-Bas, France',
           description: "D2D, TeleSales et Closing dans les secteurs B2C et B2B. Spécialiste polyglotte de l'expérience client utilisant le langage corporel digital en pharma, immobilier, e-commerce et CRM.",
         },
       ],
@@ -160,8 +160,8 @@ export const translations = {
     about: {
       label: 'Despre Mine',
       title: 'De la Cost-Eficiență la Activ-Valoare',
-      p1: 'Descopăr oportunități ascunse în fiecare provocare de business: studiez, analizez și apoi mut focusul de la cost-eficiență la activ-valoare printr-o înțelegere clară a Business Intelligence.',
-      p2: 'Dețin un portofoliu de clienți B2B în Polonia, Olanda și Franța sub structură PFA și mențin un ecosistem operațional de networking.',
+      p1: 'Cu sediul și activitatea operațională în București, România, descopăr oportunități ascunse în fiecare provocare de business: studiez, analizez și apoi mut focusul de la cost-eficiență la activ-valoare printr-o înțelegere clară a Business Intelligence.',
+      p2: 'Dețin un portofoliu de clienți B2B în România, Polonia, Olanda și Franța sub structură PFA și mențin un ecosistem operațional de networking.',
       p3: 'Background: Pharma | Specialist Experiență Client (CX) | Imobiliare | Limbaj Corporal Digital | Afiliere & E-commerce | CRM | E-learning | Gamificare & Instrumente BI',
     },
     services: {
@@ -195,7 +195,7 @@ export const translations = {
         {
           date: '14 Ani',
           title: 'Specialist Vânzări & CX',
-          company: 'Piața Europeană — Polonia, Olanda, Franța',
+          company: 'Piața Europeană — România, Polonia, Olanda, Franța',
           description: 'D2D, TeleSales și Closing în sectoarele B2C și B2B. Specialist poliglot în experiența clientului folosind limbajul corporal digital în pharma, imobiliare, e-commerce și CRM.',
         },
       ],

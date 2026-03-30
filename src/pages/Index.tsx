@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Linkedin, Github, ChevronDown, Menu, X, Globe, Briefcase, GraduationCap, Brain } from 'lucide-react';
+import profileImg from '@/assets/profile.jpg';
 import { translations, Lang } from '@/i18n/translations';
 
 const skillsList = [
@@ -112,8 +113,18 @@ const Index = () => {
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">{t.about.title}</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="rounded-xl overflow-hidden aspect-square bg-card">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&auto=format&fit=crop" alt="About" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            <div className="relative group">
+              {/* Cinematic frame with glow */}
+              <div className="absolute -inset-3 bg-gradient-to-tr from-primary/30 via-transparent to-primary/20 rounded-2xl blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute -inset-1 bg-gradient-to-br from-primary/40 to-transparent rounded-2xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
+              <div className="relative rounded-2xl overflow-hidden aspect-[3/4] bg-card border border-border/50 shadow-2xl shadow-primary/10">
+                <img src={profileImg} alt="Profile" className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" />
+                {/* Film grain overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/20 pointer-events-none" />
+                {/* Letterbox bars for cinematic feel */}
+                <div className="absolute top-0 left-0 right-0 h-6 bg-background/60 pointer-events-none" />
+                <div className="absolute bottom-0 left-0 right-0 h-6 bg-background/60 pointer-events-none" />
+              </div>
             </div>
             <div>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">{t.about.p1}</p>

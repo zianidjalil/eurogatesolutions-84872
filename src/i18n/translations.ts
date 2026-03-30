@@ -160,8 +160,8 @@ export const translations = {
     about: {
       label: 'Despre Mine',
       title: 'De la Cost-Eficiență la Activ-Valoare',
-      p1: 'Descopăr oportunități ascunse în fiecare provocare de business: studiez, analizez și apoi mut focusul de la cost-eficiență la activ-valoare printr-o înțelegere clară a Business Intelligence.',
-      p2: 'Dețin un portofoliu de clienți B2B în Polonia, Olanda și Franța sub structură PFA și mențin un ecosistem operațional de networking.',
+      p1: 'Cu sediul și activitatea operațională în București, România, descopăr oportunități ascunse în fiecare provocare de business: studiez, analizez și apoi mut focusul de la cost-eficiență la activ-valoare printr-o înțelegere clară a Business Intelligence.',
+      p2: 'Dețin un portofoliu de clienți B2B în România, Polonia, Olanda și Franța sub structură PFA și mențin un ecosistem operațional de networking.',
       p3: 'Background: Pharma | Specialist Experiență Client (CX) | Imobiliare | Limbaj Corporal Digital | Afiliere & E-commerce | CRM | E-learning | Gamificare & Instrumente BI',
     },
     services: {

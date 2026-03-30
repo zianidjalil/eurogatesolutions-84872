@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Linkedin, Github, ChevronDown, Menu, X, Globe, Briefcase, GraduationCap, Brain } from 'lucide-react';
 import profileImg from '@/assets/profile.jpg';
+import crossBorderMap from '@/assets/cross-border-map.jpg';
 import { translations, Lang } from '@/i18n/translations';
 
 const skillsList = [

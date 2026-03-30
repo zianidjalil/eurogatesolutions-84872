@@ -125,7 +125,7 @@ export const translations = {
         {
           date: '14 Ans',
           title: 'Spécialiste Ventes & CX',
-          company: 'Marché Européen — Pologne, Pays-Bas, France',
+          company: 'Marché Européen — Roumanie, Pologne, Pays-Bas, France',
           description: "D2D, TeleSales et Closing dans les secteurs B2C et B2B. Spécialiste polyglotte de l'expérience client utilisant le langage corporel digital en pharma, immobilier, e-commerce et CRM.",
         },
       ],

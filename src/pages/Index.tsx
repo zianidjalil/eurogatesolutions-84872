@@ -218,14 +218,11 @@ const Index = () => {
               {t.contact.description}
             </p>
             <div className="flex justify-center gap-4 flex-wrap">
-              <a href="mailto:hello@example.com" className="flex items-center gap-2 text-muted-foreground border border-border px-6 py-3 rounded-lg hover:text-foreground hover:border-muted-foreground transition-all hover:-translate-y-0.5">
+              <a href="mailto:eurogate@outlook.fr" className="flex items-center gap-2 text-muted-foreground border border-border px-6 py-3 rounded-lg hover:text-foreground hover:border-muted-foreground transition-all hover:-translate-y-0.5">
                 <Mail className="w-5 h-5" /> Email
               </a>
-              <a href="#" className="flex items-center gap-2 text-muted-foreground border border-border px-6 py-3 rounded-lg hover:text-foreground hover:border-muted-foreground transition-all hover:-translate-y-0.5">
+              <a href="https://www.linkedin.com/in/khaled-ziani-4849b0366" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground border border-border px-6 py-3 rounded-lg hover:text-foreground hover:border-muted-foreground transition-all hover:-translate-y-0.5">
                 <Linkedin className="w-5 h-5" /> LinkedIn
-              </a>
-              <a href="#" className="flex items-center gap-2 text-muted-foreground border border-border px-6 py-3 rounded-lg hover:text-foreground hover:border-muted-foreground transition-all hover:-translate-y-0.5">
-                <Github className="w-5 h-5" /> GitHub
               </a>
             </div>
           </div>

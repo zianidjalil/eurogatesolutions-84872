@@ -110,41 +110,14 @@ const Index = () => {
       <section className="relative py-20 px-6 overflow-hidden">
         <div className="max-w-[1100px] mx-auto">
           <FadeIn>
-            <div className="relative rounded-2xl overflow-hidden border border-border/50 shadow-2xl shadow-primary/10 group">
-              <motion.img
-                src={crossBorderMap}
-                alt="Cross-Border Sales Intermediation"
+            <div className="relative rounded-2xl overflow-hidden border border-border/50 shadow-2xl shadow-primary/10">
+              <video
+                src="/videos/cross-border.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
                 className="w-full h-auto block"
-                animate={{ scale: [1, 1.08, 1], x: ['0%', '1%', '-1%', '0%'] }}
-                transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut' }}
-              />
-              
-              {/* Shimmer light that flows across the arrows */}
-              <motion.div
-                className="absolute inset-0 pointer-events-none"
-                style={{
-                  background: 'linear-gradient(105deg, transparent 30%, rgba(245,215,122,0.15) 45%, rgba(245,215,122,0.25) 50%, rgba(245,215,122,0.15) 55%, transparent 70%)',
-                  mixBlendMode: 'screen',
-                }}
-                animate={{ x: ['-100%', '200%'] }}
-                transition={{ duration: 3, repeat: Infinity, repeatDelay: 1.5, ease: 'easeInOut' }}
-              />
-              {/* Red shimmer for South Asia arrows */}
-              <motion.div
-                className="absolute inset-0 pointer-events-none"
-                style={{
-                  background: 'linear-gradient(135deg, transparent 40%, rgba(255,80,80,0.12) 48%, rgba(255,100,100,0.2) 50%, rgba(255,80,80,0.12) 52%, transparent 60%)',
-                  mixBlendMode: 'screen',
-                }}
-                animate={{ x: ['-80%', '180%'] }}
-                transition={{ duration: 2.5, repeat: Infinity, repeatDelay: 2, ease: 'easeInOut', delay: 1 }}
-              />
-              {/* Subtle pulse glow over the whole image */}
-              <motion.div
-                className="absolute inset-0 pointer-events-none"
-                style={{ background: 'radial-gradient(ellipse at 62% 55%, rgba(245,215,122,0.08) 0%, transparent 60%)' }}
-                animate={{ opacity: [0.4, 1, 0.4] }}
-                transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
               />
             </div>
           </FadeIn>

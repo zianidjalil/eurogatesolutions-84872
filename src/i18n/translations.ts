@@ -49,7 +49,7 @@ export const translations = {
         {
           date: '14 Years',
           title: 'Sales & CX Specialist',
-          company: 'European Market — Romania, Poland, Netherlands, France',
+          company: 'European & North African Market',
           description: 'D2D, TeleSales, and Closing across B2C and B2B sectors. Polyglot customer experience specialist leveraging digital body language in pharma, real estate, e-commerce, and CRM.',
         },
       ],
@@ -113,7 +113,7 @@ export const translations = {
         {
           date: '14 Ans',
           title: 'Spécialiste Ventes & CX',
-          company: 'Marché Européen — Roumanie, Pologne, Pays-Bas, France',
+          company: 'Marché Européen & Nord-Africain',
           description: "D2D, TeleSales et Closing dans les secteurs B2C et B2B. Spécialiste polyglotte de l'expérience client utilisant le langage corporel digital en pharma, immobilier, e-commerce et CRM.",
         },
       ],
@@ -177,7 +177,7 @@ export const translations = {
         {
           date: '14 Ani',
           title: 'Specialist Vânzări & CX',
-          company: 'Piața Europeană — România, Polonia, Olanda, Franța',
+          company: 'Piața Europeană & Nord-Africană',
           description: 'D2D, TeleSales și Closing în sectoarele B2C și B2B. Specialist poliglot în experiența clientului folosind limbajul corporal digital în pharma, imobiliare, e-commerce și CRM.',
         },
       ],

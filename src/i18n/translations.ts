@@ -33,9 +33,7 @@ export const translations = {
         'Coach / Trainer',
         'Real Estate Transaction Intermediation',
         'High-Ticket Lead Generation',
-        'Digital Products Sales',
-        'Call Center Sales (Online/Offline)',
-        'Cross-border Sales Intermediation',
+        'Sales → Digital Products · Call Center (Online/Offline) · Cross-border Intermediation',
       ],
     },
     experience: {
@@ -99,9 +97,7 @@ export const translations = {
         "Coach / Formateur",
         "Intermédiation de transactions immobilières",
         "Génération de leads High-Ticket",
-        "Vente de produits digitaux",
-        "Ventes en call-center (en ligne/hors ligne)",
-        "Intermédiation pour ventes transfrontalières",
+        "Ventes → Produits digitaux · Call-center (en ligne/hors ligne) · Intermédiation transfrontalière",
       ],
     },
     experience: {
@@ -165,9 +161,7 @@ export const translations = {
         'Coach / Trainer',
         'Servicii de intermediere a tranzacțiilor imobiliare',
         'High-Ticket Lead Generation',
-        'Vânzare de produse digitale',
-        'Vânzări prin call-center (online/offline)',
-        'Intermediere pentru vânzări cross-border',
+        'Vânzări → Produse digitale · Call-center (online/offline) · Intermediere cross-border',
       ],
     },
     experience: {

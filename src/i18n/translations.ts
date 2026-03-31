@@ -33,9 +33,7 @@ export const translations = {
         'Coach / Trainer',
         'Real Estate Transaction Intermediation',
         'High-Ticket Lead Generation',
-        'Digital Products Sales',
-        'Call Center Sales (Online/Offline)',
-        'Cross-border Sales Intermediation',
+        'Sales → Digital Products · Call Center (Online/Offline) · Cross-border Intermediation',
       ],
     },
     experience: {

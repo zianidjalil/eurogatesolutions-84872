@@ -161,9 +161,7 @@ export const translations = {
         'Coach / Trainer',
         'Servicii de intermediere a tranzacțiilor imobiliare',
         'High-Ticket Lead Generation',
-        'Vânzare de produse digitale',
-        'Vânzări prin call-center (online/offline)',
-        'Intermediere pentru vânzări cross-border',
+        'Vânzări → Produse digitale · Call-center (online/offline) · Intermediere cross-border',
       ],
     },
     experience: {

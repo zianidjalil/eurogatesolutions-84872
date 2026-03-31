@@ -97,9 +97,7 @@ export const translations = {
         "Coach / Formateur",
         "Intermédiation de transactions immobilières",
         "Génération de leads High-Ticket",
-        "Vente de produits digitaux",
-        "Ventes en call-center (en ligne/hors ligne)",
-        "Intermédiation pour ventes transfrontalières",
+        "Ventes → Produits digitaux · Call-center (en ligne/hors ligne) · Intermédiation transfrontalière",
       ],
     },
     experience: {

@@ -13,7 +13,8 @@ export const MatrixBackground = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const matrixChars = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const words = ['DATA', 'ANALYTICS', 'KPI', 'ROI', 'CRM', 'SQL', 'API', 'B2B', 'B2C', 'NLP', 'AI', 'ML', 'BI', 'ETL', 'SaaS', 'LEAD', 'SALES', 'PIPELINE', 'FUNNEL', 'REVENUE', 'CHURN', 'CLV', 'CAC', 'MRR', 'ARR'];
+    const matrixChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&+=<>{}[]|/\\';
     const fontSize = 14;
     const columns = canvas.width / fontSize;
     const drops: number[] = [];

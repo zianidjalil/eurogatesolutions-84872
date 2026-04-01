@@ -13,10 +13,10 @@ export const MatrixBackground = () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const words = ['DATA', 'ANALYTICS', 'KPI', 'ROI', 'CRM', 'SQL', 'API', 'B2B', 'B2C', 'NLP', 'AI', 'ML', 'BI', 'ETL', 'SaaS', 'LEAD', 'SALES', 'PIPELINE', 'FUNNEL', 'REVENUE', 'CHURN', 'CLV', 'CAC', 'MRR', 'ARR'];
-    const matrixChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&+=<>{}[]|/\\';
+    const words = ['DATA', 'KPI', 'ROI', 'CRM', 'SQL', 'API', 'B2B', 'B2C', 'NLP', 'AI', 'BI', 'ETL', 'SaaS', 'LEAD', 'SALES', 'FUNNEL', 'REVENUE', 'CHURN', 'CLV', 'CAC', 'MRR', 'ARR', 'ANALYTICS', 'PIPELINE'];
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&+=<>{}[]';
     const fontSize = 14;
-    const columns = canvas.width / fontSize;
+    const columns = Math.floor(canvas.width / fontSize);
     const drops: number[] = [];
 
     for (let i = 0; i < columns; i++) {
@@ -24,15 +24,33 @@ export const MatrixBackground = () => {
     }
 
     const draw = () => {
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.04)';
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      ctx.fillStyle = 'hsl(120, 100%, 40%)';
       ctx.font = `${fontSize}px monospace`;
 
       for (let i = 0; i < drops.length; i++) {
-        const text = matrixChars[Math.floor(Math.random() * matrixChars.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        // Only draw on left 25% and right 25% of screen
+        const xPos = i * fontSize;
+        const leftEdge = canvas.width * 0.3;
+        const rightEdge = canvas.width * 0.7;
+        if (xPos > leftEdge && xPos < rightEdge) {
+          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+          drops[i]++;
+          continue;
+        }
+
+        // Occasionally print a full word
+        if (Math.random() > 0.98) {
+          const word = words[Math.floor(Math.random() * words.length)];
+          ctx.fillStyle = 'hsl(217, 91%, 60%)';
+          ctx.fillText(word, xPos, drops[i] * fontSize);
+        } else {
+          const text = chars[Math.floor(Math.random() * chars.length)];
+          const brightness = Math.random() > 0.9 ? 'hsl(217, 91%, 70%)' : 'hsl(120, 100%, 40%)';
+          ctx.fillStyle = brightness;
+          ctx.fillText(text, xPos, drops[i] * fontSize);
+        }
 
         if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
           drops[i] = 0;

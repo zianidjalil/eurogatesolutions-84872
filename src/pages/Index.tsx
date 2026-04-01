@@ -217,7 +217,7 @@ const Index = () => {
               <h3 className="font-semibold mb-1">Training & Coaching</h3>
               <p className="text-muted-foreground text-sm">NLP, Emotional Intelligence, Interactive Teaching</p>
             </div>
-            <div className="p-6 bg-card border border-border rounded-xl text-center">
+            <div className="p-6 bg-card/70 backdrop-blur-sm border border-border rounded-xl text-center">
               <Briefcase className="w-8 h-8 text-primary mx-auto mb-3" />
               <h3 className="font-semibold mb-1">Business Intelligence</h3>
               <p className="text-muted-foreground text-sm">CRM, Gamification, BI Tools, E-commerce</p>

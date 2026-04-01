@@ -177,7 +177,7 @@ export const translations = {
         {
           date: '14 Ani',
           title: 'Specialist Vânzări & CX',
-          company: 'Piața Europeană & Nord-Africană',
+          company: 'Piețele Europene & Nord-Africane',
           description: 'D2D, TeleSales și Closing în sectoarele B2C și B2B. Specialist poliglot în experiența clientului folosind limbajul corporal digital în pharma, imobiliare, e-commerce și CRM.',
         },
       ],

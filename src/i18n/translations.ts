@@ -113,7 +113,7 @@ export const translations = {
         {
           date: '14 Ans',
           title: 'Spécialiste Ventes & CX',
-          company: 'Marché Européen & Nord-Africain',
+          company: 'Marchés Européen & Nord-Africains',
           description: "D2D, TeleSales et Closing dans les secteurs B2C et B2B. Spécialiste polyglotte de l'expérience client utilisant le langage corporel digital en pharma, immobilier, e-commerce et CRM.",
         },
       ],

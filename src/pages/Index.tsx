@@ -38,7 +38,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen text-foreground">
       {/* Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 border-b border-border backdrop-blur-xl transition-all ${scrolled ? 'py-3 bg-background/95' : 'py-5 bg-background/80'}`}>
         <div className="max-w-[1200px] mx-auto px-6 flex items-center justify-between">
@@ -76,7 +76,7 @@ const Index = () => {
           </div>
         </div>
         {mobileOpen && (
-          <div className="md:hidden border-t border-border bg-background px-6 py-4 flex flex-col gap-3">
+          <div className="md:hidden border-t border-border bg-background/90 backdrop-blur-md px-6 py-4 flex flex-col gap-3">
             {navLinks.map(l => (
               <a key={l.href} href={l.href} onClick={() => setMobileOpen(false)} className="text-muted-foreground hover:text-foreground text-sm font-medium">{l.label}</a>
             ))}
@@ -163,7 +163,7 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {t.services.items.map((item, i) => (
-              <div key={i} className="flex items-start gap-3 p-4 bg-card border border-border rounded-xl hover:-translate-y-0.5 transition-all">
+              <div key={i} className="flex items-start gap-3 p-4 bg-card/70 backdrop-blur-sm border border-border rounded-xl hover:-translate-y-0.5 transition-all">
                 <Briefcase className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                 <span className="text-sm text-muted-foreground">{item}</span>
               </div>
@@ -203,21 +203,21 @@ const Index = () => {
           </div>
           <div className="flex flex-wrap gap-3">
             {skillsList.map(s => (
-              <span key={s} className="px-4 py-2 bg-muted border border-border rounded-md text-sm text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors cursor-default">{s}</span>
+              <span key={s} className="px-4 py-2 bg-muted/70 backdrop-blur-sm border border-border rounded-md text-sm text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors cursor-default">{s}</span>
             ))}
           </div>
           <div className="grid md:grid-cols-3 gap-6 mt-12">
-            <div className="p-6 bg-card border border-border rounded-xl text-center">
+             <div className="p-6 bg-card/70 backdrop-blur-sm border border-border rounded-xl text-center">
               <Brain className="w-8 h-8 text-primary mx-auto mb-3" />
               <h3 className="font-semibold mb-1">CX & Sales</h3>
               <p className="text-muted-foreground text-sm">D2D, TeleSales, Closing, B2C & B2B</p>
             </div>
-            <div className="p-6 bg-card border border-border rounded-xl text-center">
+             <div className="p-6 bg-card/70 backdrop-blur-sm border border-border rounded-xl text-center">
               <GraduationCap className="w-8 h-8 text-primary mx-auto mb-3" />
               <h3 className="font-semibold mb-1">Training & Coaching</h3>
               <p className="text-muted-foreground text-sm">NLP, Emotional Intelligence, Interactive Teaching</p>
             </div>
-            <div className="p-6 bg-card border border-border rounded-xl text-center">
+            <div className="p-6 bg-card/70 backdrop-blur-sm border border-border rounded-xl text-center">
               <Briefcase className="w-8 h-8 text-primary mx-auto mb-3" />
               <h3 className="font-semibold mb-1">Business Intelligence</h3>
               <p className="text-muted-foreground text-sm">CRM, Gamification, BI Tools, E-commerce</p>

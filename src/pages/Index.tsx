@@ -163,7 +163,7 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {t.services.items.map((item, i) => (
-              <div key={i} className="flex items-start gap-3 p-4 bg-card border border-border rounded-xl hover:-translate-y-0.5 transition-all">
+              <div key={i} className="flex items-start gap-3 p-4 bg-card/70 backdrop-blur-sm border border-border rounded-xl hover:-translate-y-0.5 transition-all">
                 <Briefcase className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                 <span className="text-sm text-muted-foreground">{item}</span>
               </div>

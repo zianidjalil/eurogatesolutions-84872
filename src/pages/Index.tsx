@@ -207,7 +207,7 @@ const Index = () => {
             ))}
           </div>
           <div className="grid md:grid-cols-3 gap-6 mt-12">
-            <div className="p-6 bg-card border border-border rounded-xl text-center">
+             <div className="p-6 bg-card/70 backdrop-blur-sm border border-border rounded-xl text-center">
               <Brain className="w-8 h-8 text-primary mx-auto mb-3" />
               <h3 className="font-semibold mb-1">CX & Sales</h3>
               <p className="text-muted-foreground text-sm">D2D, TeleSales, Closing, B2C & B2B</p>

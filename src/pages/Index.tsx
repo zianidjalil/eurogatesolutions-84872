@@ -76,7 +76,7 @@ const Index = () => {
           </div>
         </div>
         {mobileOpen && (
-          <div className="md:hidden border-t border-border bg-background px-6 py-4 flex flex-col gap-3">
+          <div className="md:hidden border-t border-border bg-background/90 backdrop-blur-md px-6 py-4 flex flex-col gap-3">
             {navLinks.map(l => (
               <a key={l.href} href={l.href} onClick={() => setMobileOpen(false)} className="text-muted-foreground hover:text-foreground text-sm font-medium">{l.label}</a>
             ))}

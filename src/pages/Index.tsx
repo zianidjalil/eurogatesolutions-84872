@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Linkedin, Github, ChevronDown, Menu, X, Globe, Briefcase, GraduationCap, Brain } from 'lucide-react';
 import profileImg from '@/assets/profile.jpg';
+import { MatrixBackground } from '@/components/MatrixBackground';
 
 import { translations, Lang } from '@/i18n/translations';
 
@@ -39,6 +40,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen text-foreground">
+      <MatrixBackground />
       {/* Navigation */}
       <nav className={`fixed top-0 left-0 right-0 z-50 border-b border-border backdrop-blur-xl transition-all ${scrolled ? 'py-3 bg-background/95' : 'py-5 bg-background/80'}`}>
         <div className="max-w-[1200px] mx-auto px-6 flex items-center justify-between">

@@ -203,7 +203,7 @@ const Index = () => {
           </div>
           <div className="flex flex-wrap gap-3">
             {skillsList.map(s => (
-              <span key={s} className="px-4 py-2 bg-muted border border-border rounded-md text-sm text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors cursor-default">{s}</span>
+              <span key={s} className="px-4 py-2 bg-muted/70 backdrop-blur-sm border border-border rounded-md text-sm text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors cursor-default">{s}</span>
             ))}
           </div>
           <div className="grid md:grid-cols-3 gap-6 mt-12">

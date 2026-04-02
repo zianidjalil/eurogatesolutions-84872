@@ -181,16 +181,36 @@ const Index = () => {
             <p className="text-primary text-sm font-medium uppercase tracking-widest mb-3">{t.experience.label}</p>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">{t.experience.title}</h2>
           </div>
-          <div className="relative pl-8">
-            <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-border" />
+
+          {/* Stats bar */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+            {[
+              { value: '14+', label: 'Years Experience' },
+              { value: '50K+', label: 'Requests Managed' },
+              { value: '96%', label: 'Client Retention' },
+              { value: '€1.2M', label: 'Revenue Unlocked' },
+            ].map((stat, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.8, rotateY: -30 }}
+                whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.6, type: 'spring' }}
+                whileHover={{ scale: 1.05, rotateY: 5 }}
+                className="p-5 bg-card/80 backdrop-blur-sm border border-border rounded-xl text-center"
+                style={{ perspective: '1000px' }}
+              >
+                <p className="text-2xl md:text-3xl font-bold text-primary">{stat.value}</p>
+                <p className="text-muted-foreground text-xs mt-1">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Timeline */}
+          <div className="relative pl-8 md:pl-12">
+            <div className="absolute left-0 md:left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-border" />
             {t.experience.items.map((e, i) => (
-              <div key={i} className="relative pb-12 last:pb-0">
-                <div className="absolute -left-8 top-1.5 w-3 h-3 rounded-full bg-primary border-[3px] border-background" />
-                <p className="text-primary text-sm mb-1">{e.date}</p>
-                <h3 className="text-xl font-semibold">{e.title}</h3>
-                <p className="text-muted-foreground mb-2">{e.company}</p>
-                <p className="text-muted-foreground/70 text-sm leading-relaxed">{e.description}</p>
-              </div>
+              <TimelineCard key={i} item={e} index={i} />
             ))}
           </div>
         </FadeIn>

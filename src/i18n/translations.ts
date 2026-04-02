@@ -42,7 +42,7 @@ export const translations = {
       items: [
         {
           date: '2026 – Present',
-          title: 'Independent Consultant — PFA',
+          title: 'Business Development Manager (BDM) — PFA',
           company: 'Client Portfolio · Bucharest, Romania',
           description: 'Active cross-border networking, B2B deal intermediation, and digital sales architecture (online/offline). Partnerships with NutraGrup (Polish company) and TX24 (Dutch company), both operating from Bucharest.',
           highlights: [] as string[],

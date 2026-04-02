@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-import { Mail, Linkedin, Github, ChevronDown, Menu, X, Globe, Briefcase, GraduationCap, Brain } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Mail, Linkedin, Github, ChevronDown, Menu, X, Globe, Briefcase, GraduationCap, Brain, TrendingUp, Award, ChevronRight } from 'lucide-react';
 import profileImg from '@/assets/profile.jpg';
 import { MatrixBackground } from '@/components/MatrixBackground';
 
@@ -181,16 +181,36 @@ const Index = () => {
             <p className="text-primary text-sm font-medium uppercase tracking-widest mb-3">{t.experience.label}</p>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">{t.experience.title}</h2>
           </div>
-          <div className="relative pl-8">
-            <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-border" />
+
+          {/* Stats bar */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+            {[
+              { value: '14+', label: 'Years Experience' },
+              { value: '50K+', label: 'Requests Managed' },
+              { value: '96%', label: 'Client Retention' },
+              { value: '€1.2M', label: 'Revenue Unlocked' },
+            ].map((stat, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.8, rotateY: -30 }}
+                whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.6, type: 'spring' }}
+                whileHover={{ scale: 1.05, rotateY: 5 }}
+                className="p-5 bg-card/80 backdrop-blur-sm border border-border rounded-xl text-center"
+                style={{ perspective: '1000px' }}
+              >
+                <p className="text-2xl md:text-3xl font-bold text-primary">{stat.value}</p>
+                <p className="text-muted-foreground text-xs mt-1">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Timeline */}
+          <div className="relative pl-8 md:pl-12">
+            <div className="absolute left-0 md:left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-border" />
             {t.experience.items.map((e, i) => (
-              <div key={i} className="relative pb-12 last:pb-0">
-                <div className="absolute -left-8 top-1.5 w-3 h-3 rounded-full bg-primary border-[3px] border-background" />
-                <p className="text-primary text-sm mb-1">{e.date}</p>
-                <h3 className="text-xl font-semibold">{e.title}</h3>
-                <p className="text-muted-foreground mb-2">{e.company}</p>
-                <p className="text-muted-foreground/70 text-sm leading-relaxed">{e.description}</p>
-              </div>
+              <TimelineCard key={i} item={e} index={i} />
             ))}
           </div>
         </FadeIn>
@@ -256,6 +276,95 @@ const Index = () => {
     </div>
   );
 };
+
+interface TimelineItem {
+  date: string;
+  title: string;
+  company: string;
+  description: string;
+  highlights: string[];
+}
+
+function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
+  const [expanded, setExpanded] = useState(false);
+  const hasHighlights = item.highlights && item.highlights.length > 0;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -40, rotateX: 10 }}
+      whileInView={{ opacity: 1, x: 0, rotateX: 0 }}
+      viewport={{ once: true, margin: '-50px' }}
+      transition={{ delay: index * 0.08, duration: 0.6, type: 'spring', stiffness: 100 }}
+      className="relative pb-10 last:pb-0"
+      style={{ perspective: '1200px' }}
+    >
+      {/* Pulse dot */}
+      <motion.div
+        className="absolute -left-8 md:-left-12 top-2 w-4 h-4 rounded-full bg-primary border-[3px] border-background shadow-lg shadow-primary/30"
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: index * 0.08 + 0.2, type: 'spring', stiffness: 300 }}
+      />
+
+      <motion.div
+        whileHover={{ scale: 1.01, translateZ: 10 }}
+        transition={{ type: 'spring', stiffness: 300 }}
+        className={`p-5 md:p-6 bg-card/80 backdrop-blur-sm border border-border rounded-xl cursor-pointer group hover:border-primary/30 transition-colors ${hasHighlights ? '' : ''}`}
+        onClick={() => hasHighlights && setExpanded(!expanded)}
+      >
+        <div className="flex items-start justify-between gap-3">
+          <div className="flex-1">
+            <span className="inline-block text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full mb-2">{item.date}</span>
+            <h3 className="text-lg md:text-xl font-semibold">{item.title}</h3>
+            <p className="text-muted-foreground text-sm mt-0.5">{item.company}</p>
+            <p className="text-muted-foreground/70 text-sm leading-relaxed mt-2">{item.description}</p>
+          </div>
+          {hasHighlights && (
+            <motion.div
+              animate={{ rotate: expanded ? 90 : 0 }}
+              transition={{ duration: 0.2 }}
+              className="mt-8 shrink-0"
+            >
+              <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+            </motion.div>
+          )}
+        </div>
+
+        <AnimatePresence>
+          {expanded && hasHighlights && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3, ease: 'easeInOut' }}
+              className="overflow-hidden"
+            >
+              <div className="mt-4 pt-4 border-t border-border/50 space-y-2">
+                {item.highlights.map((h, j) => (
+                  <motion.div
+                    key={j}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: j * 0.05, duration: 0.3 }}
+                    className="flex items-start gap-2"
+                  >
+                    {h.startsWith('🏆') ? (
+                      <Award className="w-4 h-4 text-yellow-500 mt-0.5 shrink-0" />
+                    ) : (
+                      <TrendingUp className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                    )}
+                    <span className="text-sm text-muted-foreground">{h.replace(/^🏆\s*/, '')}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.div>
+    </motion.div>
+  );
+}
 
 function FadeIn({ children }: { children: React.ReactNode }) {
   const ref = useRef<HTMLDivElement>(null);

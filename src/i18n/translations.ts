@@ -26,7 +26,7 @@ export const translations = {
     },
     services: {
       label: 'Services',
-      title: 'Independent Consultant',
+      title: 'Business Development Manager (BDM)',
       subtitle: 'Sole Proprietorship (Persoană Fizică Autorizată – PFA)',
       items: [
         'Business & Management Consulting',

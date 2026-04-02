@@ -296,7 +296,7 @@ export const translations = {
       items: [
         {
           date: '2026 – Prezent',
-          title: 'Consultant Independent — PFA',
+          title: 'Business Development Manager (BDM) — PFA',
           company: 'Portofoliu Clienți · București, România',
           description: 'Networking cross-border activ, intermediere deal-uri B2B și arhitectură de vânzări digitale (online/offline). Parteneriate cu NutraGrup (companie poloneză) și TX24 (companie olandeză), ambele operând din București.',
           highlights: [] as string[],

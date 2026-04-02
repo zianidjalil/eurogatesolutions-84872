@@ -153,7 +153,7 @@ export const translations = {
     },
     services: {
       label: 'Services',
-      title: 'Consultant Indépendant',
+      title: 'Business Development Manager (BDM)',
       subtitle: 'Entreprise Individuelle (Persoană Fizică Autorizată – PFA)',
       items: [
         "Conseil en affaires et management",

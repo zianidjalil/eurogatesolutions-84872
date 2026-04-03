@@ -115,9 +115,8 @@ const Index = () => {
           <FadeIn>
             <div className="relative flex items-center justify-center overflow-hidden rounded-2xl">
               <motion.div
-                animate={{ rotateY: [0, 360], scale: [1, 2, 2, 1] }}
-                transition={{ rotateY: { duration: 60, repeat: Infinity, ease: 'linear' }, scale: { duration: 60, repeat: Infinity, ease: 'easeInOut' } }}
-                style={{ transformStyle: 'preserve-3d' }}
+                animate={{ scale: [1, 2, 2, 1] }}
+                transition={{ duration: 40, repeat: Infinity, ease: 'easeInOut' }}
                 className="relative overflow-hidden shadow-2xl shadow-primary/20 rounded-2xl"
               >
                 <img

@@ -110,7 +110,7 @@ export const translations = {
         },
         {
           date: '2012 – 2013',
-          title: 'MLM Sales Representative',
+          title: 'Salesman (MLM)',
           company: 'Forever Living Products · France',
           description: 'Built direct sales network and developed client acquisition strategies in the French market.',
           highlights: [] as string[],

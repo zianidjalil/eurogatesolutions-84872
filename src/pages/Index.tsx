@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Linkedin, Github, ChevronDown, Menu, X, Globe, Briefcase, GraduationCap, Brain, TrendingUp, Award, ChevronRight } from 'lucide-react';
 import profileImg from '@/assets/profile.jpg';
+import globeImg from '@/assets/cross-border-globe.jpg';
 import { MatrixBackground } from '@/components/MatrixBackground';
 
 import { translations, Lang } from '@/i18n/translations';
@@ -108,19 +109,25 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Cross-Border Map */}
+      {/* Cross-Border Globe */}
       <section className="relative py-20 px-6 overflow-hidden">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-[800px] mx-auto">
           <FadeIn>
-            <div className="relative rounded-2xl overflow-hidden border border-border/50 shadow-2xl shadow-primary/10">
-              <video
-                src="/videos/cross-border.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-auto block"
-              />
+            <div className="relative flex items-center justify-center" style={{ perspective: '1200px' }}>
+              <motion.div
+                animate={{ rotateY: [0, 360] }}
+                transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+                className="relative rounded-full overflow-hidden shadow-2xl shadow-primary/20"
+                style={{ transformStyle: 'preserve-3d' }}
+              >
+                <img
+                  src={globeImg}
+                  alt="Cross-Border Sales Intermediation Globe"
+                  className="w-full h-auto block rounded-2xl"
+                />
+              </motion.div>
+              {/* Ambient glow */}
+              <div className="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent pointer-events-none rounded-full" />
             </div>
           </FadeIn>
         </div>
@@ -186,7 +193,7 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
             {[
               { value: '14+', label: 'Years Experience' },
-              { value: '50K+', label: 'Requests Managed' },
+              { value: '600K+', label: 'B2C Customers Managed' },
               { value: '96%', label: 'Client Retention' },
               { value: '€1.2M', label: 'Revenue Unlocked' },
             ].map((stat, i) => (

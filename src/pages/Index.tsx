@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Linkedin, Github, ChevronDown, Menu, X, Globe, Briefcase, GraduationCap, Brain, TrendingUp, Award, ChevronRight } from 'lucide-react';
-import profileImg from '@/assets/profile-new.jpg';
+import profileImg from '@/assets/profile.jpg';
 import globeImg from '@/assets/cross-border-globe.jpg';
 import { MatrixBackground } from '@/components/MatrixBackground';
 

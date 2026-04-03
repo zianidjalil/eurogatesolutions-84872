@@ -113,12 +113,11 @@ const Index = () => {
       <section className="relative py-20 px-6 overflow-hidden">
         <div className="max-w-[800px] mx-auto">
           <FadeIn>
-            <div className="relative flex items-center justify-center" style={{ perspective: '1200px' }}>
+            <div className="relative flex items-center justify-center overflow-hidden rounded-2xl">
               <motion.div
-                animate={{ rotateY: [0, 360] }}
-                transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-                className="relative rounded-full overflow-hidden shadow-2xl shadow-primary/20"
-                style={{ transformStyle: 'preserve-3d' }}
+                animate={{ scale: [1, 5], x: [0, -80], y: [0, -40] }}
+                transition={{ duration: 60, repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut' }}
+                className="relative overflow-hidden shadow-2xl shadow-primary/20 rounded-2xl"
               >
                 <img
                   src={globeImg}
@@ -127,7 +126,7 @@ const Index = () => {
                 />
               </motion.div>
               {/* Ambient glow */}
-              <div className="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent pointer-events-none rounded-full" />
+              <div className="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent pointer-events-none rounded-2xl" />
             </div>
           </FadeIn>
         </div>

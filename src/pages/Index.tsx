@@ -186,7 +186,7 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
             {[
               { value: '14+', label: 'Years Experience' },
-              { value: '50K+', label: 'Requests Managed' },
+              { value: '600K+', label: 'B2C Customers Managed' },
               { value: '96%', label: 'Client Retention' },
               { value: '€1.2M', label: 'Revenue Unlocked' },
             ].map((stat, i) => (

@@ -237,7 +237,7 @@ export const translations = {
         },
         {
           date: '2012 – 2013',
-          title: 'Représentant Ventes MLM',
+          title: 'Salesman (MLM)',
           company: 'Forever Living Products · France',
           description: 'Développement d\'un réseau de vente directe et de stratégies d\'acquisition clients sur le marché français.',
           highlights: [] as string[],

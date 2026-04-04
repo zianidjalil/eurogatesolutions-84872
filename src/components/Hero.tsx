@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -7,6 +8,33 @@ interface HeroProps {
   lang: Language;
   t: Translation;
 }
+
+const TypewriterText = ({ text }: { text: string }) => {
+  const [displayed, setDisplayed] = useState('');
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    setDisplayed('');
+    setIndex(0);
+  }, [text]);
+
+  useEffect(() => {
+    if (index < text.length) {
+      const timer = setTimeout(() => {
+        setDisplayed(prev => prev + text[index]);
+        setIndex(i => i + 1);
+      }, 60);
+      return () => clearTimeout(timer);
+    }
+  }, [index, text]);
+
+  return (
+    <span>
+      {displayed}
+      <span className="inline-block w-[3px] h-[1em] bg-primary ml-1 align-middle animate-pulse" />
+    </span>
+  );
+};
 
 export const Hero = ({ lang, t }: HeroProps) => {
   const handleConsultation = () => {
@@ -44,7 +72,7 @@ export const Hero = ({ lang, t }: HeroProps) => {
           transition={{ duration: 1 }}
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-            {t.hero.title}
+            <TypewriterText text={t.hero.title} />
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto">
             {t.hero.subtitle}

@@ -72,7 +72,7 @@ export const Hero = ({ lang, t }: HeroProps) => {
           transition={{ duration: 1 }}
         >
           <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-            {t.hero.title}
+            <TypewriterText text={t.hero.title} />
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto">
             {t.hero.subtitle}

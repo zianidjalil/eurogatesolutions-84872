@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Linkedin, Github, ChevronDown, Menu, X, Globe, Briefcase, GraduationCap, Brain, TrendingUp, Award, ChevronRight } from 'lucide-react';
 import profileImg from '@/assets/profile.jpg';
 import globeImg from '@/assets/cross-border-globe.jpg';
+import pill3dMotion from '@/assets/pill-3d-motion.gif';
 import { MatrixBackground } from '@/components/MatrixBackground';
 import { AIAgent } from '@/components/AIAgent';
 
@@ -183,6 +184,22 @@ const Index = () => {
                 <span className="text-sm text-muted-foreground">{item}</span>
               </div>
             ))}
+          </div>
+        </FadeIn>
+      </section>
+
+      {/* 3D Pill Animation */}
+      <section className="py-12 px-6 max-w-[800px] mx-auto">
+        <FadeIn>
+          <div className="relative rounded-2xl overflow-hidden border border-border/30 mx-auto" style={{ maxHeight: '400px' }}>
+            {/* Crop bottom to hide watermark */}
+            <div className="overflow-hidden" style={{ marginBottom: '-60px' }}>
+              <img
+                src={pill3dMotion}
+                alt="3D Motion Animation"
+                className="w-full h-auto object-cover"
+              />
+            </div>
           </div>
         </FadeIn>
       </section>

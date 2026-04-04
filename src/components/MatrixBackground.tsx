@@ -43,7 +43,7 @@ export const MatrixBackground = () => {
         // Occasionally print a full word
         if (Math.random() > 0.98) {
           const word = words[Math.floor(Math.random() * words.length)];
-          ctx.fillStyle = 'hsl(217, 91%, 60%)';
+          ctx.fillStyle = 'hsl(217, 100%, 60%)';
           ctx.fillText(word, xPos, drops[i] * fontSize);
         } else {
           const text = chars[Math.floor(Math.random() * chars.length)];

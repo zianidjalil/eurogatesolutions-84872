@@ -187,6 +187,22 @@ const Index = () => {
         </FadeIn>
       </section>
 
+      {/* 3D Pill Animation */}
+      <section className="py-12 px-6 max-w-[800px] mx-auto">
+        <FadeIn>
+          <div className="relative rounded-2xl overflow-hidden border border-border/30 mx-auto" style={{ maxHeight: '400px' }}>
+            {/* Crop bottom to hide watermark */}
+            <div className="overflow-hidden" style={{ marginBottom: '-60px' }}>
+              <img
+                src={pill3dMotion}
+                alt="3D Motion Animation"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+        </FadeIn>
+      </section>
+
       {/* Experience */}
       <section id="experience" className="py-24 px-6 max-w-[1200px] mx-auto">
         <FadeIn>

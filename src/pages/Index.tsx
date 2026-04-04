@@ -4,6 +4,7 @@ import { Mail, Linkedin, Github, ChevronDown, Menu, X, Globe, Briefcase, Graduat
 import profileImg from '@/assets/profile.jpg';
 import globeImg from '@/assets/cross-border-globe.jpg';
 import pill3dMotion from '@/assets/pill-3d-motion.gif';
+import retroTvs from '@/assets/retro-tvs.jpg';
 import { MatrixBackground } from '@/components/MatrixBackground';
 import { AIAgent } from '@/components/AIAgent';
 
@@ -188,16 +189,30 @@ const Index = () => {
         </FadeIn>
       </section>
 
-      {/* 3D Pill Animation */}
-      <section className="py-12 px-6 max-w-[800px] mx-auto">
+      {/* 3D Pill on Retro TV */}
+      <section className="py-12 px-6 max-w-[900px] mx-auto">
         <FadeIn>
-          <div className="relative rounded-2xl overflow-hidden border border-border/30 mx-auto" style={{ maxHeight: '400px' }}>
-            {/* Crop bottom to hide watermark */}
-            <div className="overflow-hidden" style={{ marginBottom: '-60px' }}>
+          <div className="relative rounded-2xl overflow-hidden border border-border/30 mx-auto">
+            <img
+              src={retroTvs}
+              alt="Retro TV screens"
+              className="w-full h-auto object-cover"
+            />
+            {/* Pill GIF overlaid on the large center-right TV screen */}
+            <div
+              className="absolute overflow-hidden rounded-sm"
+              style={{
+                top: '18%',
+                left: '38%',
+                width: '22%',
+                height: '42%',
+              }}
+            >
               <img
                 src={pill3dMotion}
-                alt="3D Motion Animation"
-                className="w-full h-auto object-cover"
+                alt="3D Pill Animation"
+                className="w-full h-full object-cover"
+                style={{ marginBottom: '-15%' }}
               />
             </div>
           </div>

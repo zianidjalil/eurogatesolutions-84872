@@ -4,37 +4,43 @@
 
 @layer base {
   :root {
-    /* Portfolio Dark Theme */
-    --background: 240 6% 4%;
-    --foreground: 0 0% 100%;
+    /* Pure Black & Electric Blue Theme */
+    --background: 0 0% 2%;
+    --foreground: 210 100% 98%;
 
-    --card: 240 5% 7%;
-    --card-foreground: 0 0% 100%;
+    --card: 220 10% 5%;
+    --card-foreground: 210 100% 98%;
 
-    --popover: 240 5% 7%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 220 10% 5%;
+    --popover-foreground: 210 100% 98%;
 
-    /* Blue Accent */
-    --primary: 217 91% 60%;
+    /* Electric Blue Accent */
+    --primary: 217 100% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 4% 12%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 220 15% 8%;
+    --secondary-foreground: 210 100% 98%;
 
-    --muted: 240 4% 16%;
-    --muted-foreground: 240 5% 65%;
+    --muted: 220 10% 12%;
+    --muted-foreground: 217 30% 55%;
 
-    --accent: 217 91% 60%;
+    --accent: 217 100% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 4% 16%;
-    --input: 240 4% 16%;
-    --ring: 217 91% 60%;
+    --border: 217 30% 12%;
+    --input: 217 30% 12%;
+    --ring: 217 100% 55%;
 
     --radius: 0.5rem;
+
+    /* Custom gradients & effects */
+    --gradient-primary: linear-gradient(135deg, hsl(217 100% 55%), hsl(217 100% 70%));
+    --gradient-glow: radial-gradient(ellipse at center, hsl(217 100% 55% / 0.15), transparent 70%);
+    --shadow-glow: 0 0 30px hsl(217 100% 55% / 0.3);
+    --shadow-elegant: 0 10px 40px -10px hsl(217 100% 55% / 0.25);
   }
 }
 
@@ -47,7 +53,6 @@
     @apply bg-background text-foreground;
     position: relative;
   }
-
 }
 
 @keyframes fadeInUp {

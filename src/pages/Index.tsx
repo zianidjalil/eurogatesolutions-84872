@@ -286,6 +286,9 @@ const Index = () => {
       <footer className="border-t border-border py-10 text-center">
         <p className="text-muted-foreground/60 text-sm">{t.footer}</p>
       </footer>
+
+      {/* AI Agent */}
+      <AIAgent />
     </div>
   );
 };

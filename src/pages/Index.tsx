@@ -4,6 +4,7 @@ import { Mail, Linkedin, Github, ChevronDown, Menu, X, Globe, Briefcase, Graduat
 import profileImg from '@/assets/profile.jpg';
 import globeImg from '@/assets/cross-border-globe.jpg';
 import { MatrixBackground } from '@/components/MatrixBackground';
+import { AIAgent } from '@/components/AIAgent';
 
 import { translations, Lang } from '@/i18n/translations';
 
@@ -285,6 +286,9 @@ const Index = () => {
       <footer className="border-t border-border py-10 text-center">
         <p className="text-muted-foreground/60 text-sm">{t.footer}</p>
       </footer>
+
+      {/* AI Agent */}
+      <AIAgent />
     </div>
   );
 };

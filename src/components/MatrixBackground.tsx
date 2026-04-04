@@ -47,7 +47,7 @@ export const MatrixBackground = () => {
           ctx.fillText(word, xPos, drops[i] * fontSize);
         } else {
           const text = chars[Math.floor(Math.random() * chars.length)];
-          const brightness = Math.random() > 0.9 ? 'hsl(217, 91%, 70%)' : 'hsl(120, 100%, 40%)';
+          const brightness = Math.random() > 0.9 ? 'hsl(217, 100%, 70%)' : 'hsl(217, 100%, 40%)';
           ctx.fillStyle = brightness;
           ctx.fillText(text, xPos, drops[i] * fontSize);
         }

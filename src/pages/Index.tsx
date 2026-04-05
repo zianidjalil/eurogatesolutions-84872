@@ -116,7 +116,7 @@ const Index = () => {
       <section className="relative py-20 px-6 overflow-hidden">
         <div className="max-w-[800px] mx-auto">
           <FadeIn>
-            <div className="relative flex items-center justify-center overflow-hidden rounded-2xl">
+            <div className="relative flex items-center justify-center rounded-2xl">
               <motion.div
                 animate={{ 
                   rotateX: [0, 2, -2, 1, -1, 0],

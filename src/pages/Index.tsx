@@ -114,61 +114,99 @@ const Index = () => {
       </section>
 
       {/* Cross-Border Globe */}
-      <section className="relative py-20 px-6 overflow-hidden">
-        <div className="max-w-[800px] mx-auto">
+      {/* Cross-Border Data Map */}
+      <section className="relative py-20 px-6 overflow-visible">
+        <div className="max-w-[900px] mx-auto">
           <FadeIn>
-            <div className="relative flex items-center justify-center rounded-2xl">
+            <div className="relative flex items-center justify-center">
+              {/* Main map container with glow */}
               <motion.div
-                animate={{ 
-                  rotateX: [0, 2, -2, 1, -1, 0],
-                  rotateY: [0, 3, -3, 2, -2, 0],
-                  rotateZ: [0, 0.5, -0.5, 0],
-                  scale: [1, 1.02, 1, 1.01, 1],
+                className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/30 border border-primary/20"
+                animate={{
+                  boxShadow: [
+                    '0 0 30px hsl(var(--primary) / 0.2)',
+                    '0 0 60px hsl(var(--primary) / 0.35)',
+                    '0 0 30px hsl(var(--primary) / 0.2)',
+                  ],
                 }}
-                transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-                style={{ transformStyle: 'preserve-3d', perspective: '1200px' }}
-                className="relative overflow-hidden shadow-2xl shadow-primary/20 rounded-2xl"
+                transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
               >
                 <img
-                  src={globeImg}
-                  alt="Cross-Border Sales Intermediation Globe"
+                  src={openDataMap}
+                  alt="Cross-Border Sales Data Map"
                   className="w-full h-auto block rounded-2xl"
+                />
+                {/* Scan line overlay */}
+                <motion.div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background: 'linear-gradient(180deg, transparent 0%, hsl(var(--primary) / 0.08) 50%, transparent 100%)',
+                    backgroundSize: '100% 40px',
+                  }}
+                  animate={{ backgroundPositionY: ['0px', '200px'] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
                 />
               </motion.div>
 
-              {/* Shining heartbeat arrows */}
+              {/* Pulsing data nodes around the map */}
               {[
-                { top: '15%', left: '-8%', rotate: 45 },
-                { top: '15%', right: '-8%', rotate: -45 },
-                { bottom: '15%', left: '-8%', rotate: 135 },
-                { bottom: '15%', right: '-8%', rotate: -135 },
-                { top: '50%', left: '-10%', rotate: 0 },
-                { top: '50%', right: '-10%', rotate: 180 },
+                { top: '10%', left: '-4%' },
+                { top: '30%', right: '-4%' },
+                { bottom: '20%', left: '-3%' },
+                { bottom: '10%', right: '-5%' },
+                { top: '50%', left: '-6%' },
+                { top: '60%', right: '-6%' },
               ].map((pos, i) => (
                 <motion.div
                   key={i}
-                  className="absolute pointer-events-none"
-                  style={{ ...pos, transform: `rotate(${pos.rotate}deg)` }}
+                  className="absolute w-3 h-3 rounded-full pointer-events-none"
+                  style={{ ...pos, backgroundColor: 'hsl(var(--primary))' }}
                   animate={{
-                    scale: [1, 1.3, 1, 1.15, 1],
-                    opacity: [0.6, 1, 0.6, 0.9, 0.6],
+                    scale: [1, 1.8, 1],
+                    opacity: [0.4, 1, 0.4],
+                    boxShadow: [
+                      '0 0 4px hsl(var(--primary) / 0.3)',
+                      '0 0 16px hsl(var(--primary) / 0.7)',
+                      '0 0 4px hsl(var(--primary) / 0.3)',
+                    ],
                   }}
                   transition={{
-                    duration: 1.2,
+                    duration: 2,
                     repeat: Infinity,
                     ease: 'easeInOut',
-                    delay: i * 0.15,
+                    delay: i * 0.3,
                   }}
+                />
+              ))}
+
+              {/* Connection lines (arrows replaced with data streams) */}
+              {[
+                { top: '15%', left: '-8%', rotate: 30 },
+                { top: '15%', right: '-8%', rotate: -30 },
+                { bottom: '15%', left: '-8%', rotate: 150 },
+                { bottom: '15%', right: '-8%', rotate: -150 },
+              ].map((pos, i) => (
+                <motion.div
+                  key={`line-${i}`}
+                  className="absolute pointer-events-none"
+                  style={{ ...pos, transform: `rotate(${pos.rotate}deg)` }}
                 >
-                  <ChevronRight 
-                    className="w-10 h-10 drop-shadow-[0_0_8px_hsl(var(--primary))]" 
-                    style={{ color: 'hsl(var(--primary))' }}
+                  <motion.div
+                    className="w-12 h-0.5 rounded-full"
+                    style={{ backgroundColor: 'hsl(var(--primary))' }}
+                    animate={{
+                      scaleX: [0.3, 1, 0.3],
+                      opacity: [0.3, 0.9, 0.3],
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                      delay: i * 0.25,
+                    }}
                   />
                 </motion.div>
               ))}
-
-              {/* Ambient glow */}
-              <div className="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent pointer-events-none rounded-2xl" />
             </div>
           </FadeIn>
         </div>

@@ -113,111 +113,27 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Cross-Border Data Map — All arrows converge on Romania */}
-      <section className="relative py-20 px-6 overflow-visible">
+      {/* Cross-Border Sales Globe */}
+      <section className="relative py-20 px-6">
         <div className="max-w-[900px] mx-auto">
           <FadeIn>
             <div className="relative flex items-center justify-center">
-              {/* Main map container with glow */}
               <motion.div
                 className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/30 border border-primary/20"
                 animate={{
-                  boxShadow: [
-                    '0 0 30px hsl(var(--primary) / 0.2)',
-                    '0 0 60px hsl(var(--primary) / 0.35)',
-                    '0 0 30px hsl(var(--primary) / 0.2)',
-                  ],
+                  rotateX: [0, 1.5, 0, -1.5, 0],
+                  rotateY: [0, -2, 0, 2, 0],
+                  rotateZ: [0, 0.5, 0, -0.5, 0],
                 }}
-                transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+                transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+                style={{ perspective: 800, transformStyle: 'preserve-3d' }}
               >
                 <img
-                  src={openDataMap}
-                  alt="Cross-Border Sales Data Map"
+                  src={globeImg}
+                  alt="Cross-Border Sales Intermediation Globe"
                   className="w-full h-auto block rounded-2xl"
                 />
-                {/* Scan line overlay */}
-                <motion.div
-                  className="absolute inset-0 pointer-events-none"
-                  style={{
-                    background: 'linear-gradient(180deg, transparent 0%, hsl(var(--primary) / 0.08) 50%, transparent 100%)',
-                    backgroundSize: '100% 40px',
-                  }}
-                  animate={{ backgroundPositionY: ['0px', '200px'] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
-                />
-
-                {/* Romania focal point — pulsing beacon */}
-                <motion.div
-                  className="absolute pointer-events-none"
-                  style={{ top: '32%', left: '56%' }}
-                  animate={{
-                    scale: [1, 1.6, 1],
-                    opacity: [0.7, 1, 0.7],
-                  }}
-                  transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
-                >
-                  <div className="w-4 h-4 rounded-full border-2 border-primary bg-primary/40 shadow-[0_0_20px_hsl(var(--primary)/0.6)]" />
-                </motion.div>
-
-                {/* Label */}
-                <motion.div
-                  className="absolute pointer-events-none text-xs font-bold tracking-wider"
-                  style={{ top: '27%', left: '53%', color: 'hsl(var(--primary))' }}
-                  animate={{ opacity: [0.6, 1, 0.6] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
-                  🇷🇴 ROMANIA
-                </motion.div>
-
-                {/* Animated arrows converging on Romania from source countries */}
-                {[
-                  { label: '🇫🇷', startX: '20%', startY: '38%', desc: 'France' },
-                  { label: '🇳🇱', startX: '42%', startY: '22%', desc: 'Netherlands' },
-                  { label: '🇵🇱', startX: '52%', startY: '18%', desc: 'Poland' },
-                  { label: '🇩🇿', startX: '30%', startY: '65%', desc: 'Algeria' },
-                  { label: '🇪🇺', startX: '75%', startY: '50%', desc: 'EU Markets' },
-                ].map((src, i) => (
-                  <g key={i}>
-                    {/* Source node */}
-                    <motion.div
-                      className="absolute pointer-events-none flex flex-col items-center"
-                      style={{ left: src.startX, top: src.startY }}
-                      animate={{ scale: [1, 1.15, 1], opacity: [0.7, 1, 0.7] }}
-                      transition={{ duration: 2.5, repeat: Infinity, delay: i * 0.3 }}
-                    >
-                      <span className="text-sm">{src.label}</span>
-                      <span className="text-[8px] font-medium mt-0.5" style={{ color: 'hsl(var(--primary))' }}>{src.desc}</span>
-                    </motion.div>
-                  </g>
-                ))}
               </motion.div>
-
-              {/* Animated travel dots — from edges toward Romania center */}
-              {[
-                { fromX: -40, fromY: 20, toX: 200, toY: 80, delay: 0 },
-                { fromX: 100, fromY: -30, toX: 200, toY: 80, delay: 0.5 },
-                { fromX: 340, fromY: 40, toX: 200, toY: 80, delay: 1 },
-                { fromX: 60, fromY: 200, toX: 200, toY: 80, delay: 1.5 },
-                { fromX: 320, fromY: 180, toX: 200, toY: 80, delay: 2 },
-              ].map((path, i) => (
-                <motion.div
-                  key={`dot-${i}`}
-                  className="absolute w-2 h-2 rounded-full pointer-events-none"
-                  style={{ backgroundColor: 'hsl(var(--primary))', filter: 'blur(0.5px)', boxShadow: '0 0 8px hsl(var(--primary) / 0.6)' }}
-                  animate={{
-                    left: [path.fromX, path.toX],
-                    top: [path.fromY, path.toY],
-                    opacity: [0, 1, 1, 0],
-                    scale: [0.5, 1, 1, 0.3],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: 'easeInOut',
-                    delay: path.delay,
-                  }}
-                />
-              ))}
             </div>
           </FadeIn>
         </div>

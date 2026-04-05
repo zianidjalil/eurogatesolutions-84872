@@ -190,7 +190,7 @@ const Index = () => {
       </section>
 
       {/* 3D Pill on Retro TV */}
-      <section className="py-12 px-6 max-w-[900px] mx-auto">
+      <section className="py-12 px-6 max-w-[2700px] mx-auto">
         <FadeIn>
           <div className="relative rounded-2xl overflow-hidden border border-border/30 mx-auto">
             <img

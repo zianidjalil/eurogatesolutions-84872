@@ -116,7 +116,7 @@ const Index = () => {
       <section className="relative py-20 px-6 overflow-hidden">
         <div className="max-w-[800px] mx-auto">
           <FadeIn>
-            <div className="relative flex items-center justify-center overflow-hidden rounded-2xl">
+            <div className="relative flex items-center justify-center rounded-2xl">
               <motion.div
                 animate={{ 
                   rotateX: [0, 2, -2, 1, -1, 0],
@@ -134,6 +134,38 @@ const Index = () => {
                   className="w-full h-auto block rounded-2xl"
                 />
               </motion.div>
+
+              {/* Shining heartbeat arrows */}
+              {[
+                { top: '15%', left: '-8%', rotate: 45 },
+                { top: '15%', right: '-8%', rotate: -45 },
+                { bottom: '15%', left: '-8%', rotate: 135 },
+                { bottom: '15%', right: '-8%', rotate: -135 },
+                { top: '50%', left: '-10%', rotate: 0 },
+                { top: '50%', right: '-10%', rotate: 180 },
+              ].map((pos, i) => (
+                <motion.div
+                  key={i}
+                  className="absolute pointer-events-none"
+                  style={{ ...pos, transform: `rotate(${pos.rotate}deg)` }}
+                  animate={{
+                    scale: [1, 1.3, 1, 1.15, 1],
+                    opacity: [0.6, 1, 0.6, 0.9, 0.6],
+                  }}
+                  transition={{
+                    duration: 1.2,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                    delay: i * 0.15,
+                  }}
+                >
+                  <ChevronRight 
+                    className="w-10 h-10 drop-shadow-[0_0_8px_hsl(var(--primary))]" 
+                    style={{ color: 'hsl(var(--primary))' }}
+                  />
+                </motion.div>
+              ))}
+
               {/* Ambient glow */}
               <div className="absolute inset-0 bg-gradient-radial from-primary/10 via-transparent to-transparent pointer-events-none rounded-2xl" />
             </div>

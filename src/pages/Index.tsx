@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Linkedin, Github, ChevronDown, Menu, X, Globe, Briefcase, GraduationCap, Brain, TrendingUp, Award, ChevronRight } from 'lucide-react';
 import profileImg from '@/assets/profile.jpg';
 import globeImg from '@/assets/cross-border-globe.jpg';
+import openDataMap from '@/assets/open-data-map.gif';
 import pill3dMotion from '@/assets/pill-3d-motion.gif';
 import retroTvs from '@/assets/retro-tvs.jpg';
 import { MatrixBackground } from '@/components/MatrixBackground';

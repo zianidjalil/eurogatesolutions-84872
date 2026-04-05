@@ -113,8 +113,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Cross-Border Globe */}
-      {/* Cross-Border Data Map */}
+      {/* Cross-Border Data Map — All arrows converge on Romania */}
       <section className="relative py-20 px-6 overflow-visible">
         <div className="max-w-[900px] mx-auto">
           <FadeIn>
@@ -146,66 +145,78 @@ const Index = () => {
                   animate={{ backgroundPositionY: ['0px', '200px'] }}
                   transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
                 />
+
+                {/* Romania focal point — pulsing beacon */}
+                <motion.div
+                  className="absolute pointer-events-none"
+                  style={{ top: '32%', left: '56%' }}
+                  animate={{
+                    scale: [1, 1.6, 1],
+                    opacity: [0.7, 1, 0.7],
+                  }}
+                  transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
+                >
+                  <div className="w-4 h-4 rounded-full border-2 border-primary bg-primary/40 shadow-[0_0_20px_hsl(var(--primary)/0.6)]" />
+                </motion.div>
+
+                {/* Label */}
+                <motion.div
+                  className="absolute pointer-events-none text-xs font-bold tracking-wider"
+                  style={{ top: '27%', left: '53%', color: 'hsl(var(--primary))' }}
+                  animate={{ opacity: [0.6, 1, 0.6] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                >
+                  🇷🇴 ROMANIA
+                </motion.div>
+
+                {/* Animated arrows converging on Romania from source countries */}
+                {[
+                  { label: '🇫🇷', startX: '20%', startY: '38%', desc: 'France' },
+                  { label: '🇳🇱', startX: '42%', startY: '22%', desc: 'Netherlands' },
+                  { label: '🇵🇱', startX: '52%', startY: '18%', desc: 'Poland' },
+                  { label: '🇩🇿', startX: '30%', startY: '65%', desc: 'Algeria' },
+                  { label: '🇪🇺', startX: '75%', startY: '50%', desc: 'EU Markets' },
+                ].map((src, i) => (
+                  <g key={i}>
+                    {/* Source node */}
+                    <motion.div
+                      className="absolute pointer-events-none flex flex-col items-center"
+                      style={{ left: src.startX, top: src.startY }}
+                      animate={{ scale: [1, 1.15, 1], opacity: [0.7, 1, 0.7] }}
+                      transition={{ duration: 2.5, repeat: Infinity, delay: i * 0.3 }}
+                    >
+                      <span className="text-sm">{src.label}</span>
+                      <span className="text-[8px] font-medium mt-0.5" style={{ color: 'hsl(var(--primary))' }}>{src.desc}</span>
+                    </motion.div>
+                  </g>
+                ))}
               </motion.div>
 
-              {/* Pulsing data nodes around the map */}
+              {/* Animated travel dots — from edges toward Romania center */}
               {[
-                { top: '10%', left: '-4%' },
-                { top: '30%', right: '-4%' },
-                { bottom: '20%', left: '-3%' },
-                { bottom: '10%', right: '-5%' },
-                { top: '50%', left: '-6%' },
-                { top: '60%', right: '-6%' },
-              ].map((pos, i) => (
+                { fromX: -40, fromY: 20, toX: 200, toY: 80, delay: 0 },
+                { fromX: 100, fromY: -30, toX: 200, toY: 80, delay: 0.5 },
+                { fromX: 340, fromY: 40, toX: 200, toY: 80, delay: 1 },
+                { fromX: 60, fromY: 200, toX: 200, toY: 80, delay: 1.5 },
+                { fromX: 320, fromY: 180, toX: 200, toY: 80, delay: 2 },
+              ].map((path, i) => (
                 <motion.div
-                  key={i}
-                  className="absolute w-3 h-3 rounded-full pointer-events-none"
-                  style={{ ...pos, backgroundColor: 'hsl(var(--primary))' }}
+                  key={`dot-${i}`}
+                  className="absolute w-2 h-2 rounded-full pointer-events-none"
+                  style={{ backgroundColor: 'hsl(var(--primary))', filter: 'blur(0.5px)', boxShadow: '0 0 8px hsl(var(--primary) / 0.6)' }}
                   animate={{
-                    scale: [1, 1.8, 1],
-                    opacity: [0.4, 1, 0.4],
-                    boxShadow: [
-                      '0 0 4px hsl(var(--primary) / 0.3)',
-                      '0 0 16px hsl(var(--primary) / 0.7)',
-                      '0 0 4px hsl(var(--primary) / 0.3)',
-                    ],
+                    left: [path.fromX, path.toX],
+                    top: [path.fromY, path.toY],
+                    opacity: [0, 1, 1, 0],
+                    scale: [0.5, 1, 1, 0.3],
                   }}
                   transition={{
-                    duration: 2,
+                    duration: 3,
                     repeat: Infinity,
                     ease: 'easeInOut',
-                    delay: i * 0.3,
+                    delay: path.delay,
                   }}
                 />
-              ))}
-
-              {/* Connection lines (arrows replaced with data streams) */}
-              {[
-                { top: '15%', left: '-8%', rotate: 30 },
-                { top: '15%', right: '-8%', rotate: -30 },
-                { bottom: '15%', left: '-8%', rotate: 150 },
-                { bottom: '15%', right: '-8%', rotate: -150 },
-              ].map((pos, i) => (
-                <motion.div
-                  key={`line-${i}`}
-                  className="absolute pointer-events-none"
-                  style={{ ...pos, transform: `rotate(${pos.rotate}deg)` }}
-                >
-                  <motion.div
-                    className="w-12 h-0.5 rounded-full"
-                    style={{ backgroundColor: 'hsl(var(--primary))' }}
-                    animate={{
-                      scaleX: [0.3, 1, 0.3],
-                      opacity: [0.3, 0.9, 0.3],
-                    }}
-                    transition={{
-                      duration: 1.5,
-                      repeat: Infinity,
-                      ease: 'easeInOut',
-                      delay: i * 0.25,
-                    }}
-                  />
-                </motion.div>
               ))}
             </div>
           </FadeIn>

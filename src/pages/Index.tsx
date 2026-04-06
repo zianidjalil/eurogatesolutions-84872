@@ -6,6 +6,7 @@ import globeImg from '@/assets/cross-border-globe.jpg';
 import openDataMap from '@/assets/open-data-map.gif';
 import pill3dMotion from '@/assets/pill-3d-motion.gif';
 import retroTvs from '@/assets/retro-tvs.jpg';
+import downloadGif from '@/assets/download.gif';
 import { MatrixBackground } from '@/components/MatrixBackground';
 import { AIAgent } from '@/components/AIAgent';
 
@@ -290,6 +291,16 @@ const Index = () => {
           </div>
         </FadeIn>
       </section>
+
+      {/* Animated GIF before Contact */}
+      <div className="flex justify-center py-12">
+        <img 
+          src={downloadGif} 
+          alt="Animation" 
+          className="max-w-[400px] w-full mix-blend-screen"
+          style={{ background: 'transparent' }}
+        />
+      </div>
 
       {/* Contact */}
       <section id="contact" className="py-24 px-6 max-w-[1200px] mx-auto">

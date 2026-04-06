@@ -6,6 +6,7 @@ import globeImg from '@/assets/cross-border-globe.jpg';
 import openDataMap from '@/assets/open-data-map.gif';
 import pill3dMotion from '@/assets/pill-3d-motion.gif';
 import retroTvs from '@/assets/retro-tvs.jpg';
+import downloadGif from '@/assets/download.gif';
 import { MatrixBackground } from '@/components/MatrixBackground';
 import { AIAgent } from '@/components/AIAgent';
 

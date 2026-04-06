@@ -188,6 +188,19 @@ export const translations = {
           highlights: [] as string[],
         },
         {
+          date: 'Juin 2025 – Déc 2025',
+          title: 'Consultant Ventes Immobilières',
+          company: 'North Bucharest Investments · Bucarest, Roumanie',
+          description: 'Agence immobilière de luxe premium spécialisée dans les investissements immobiliers de haute valeur. Service exceptionnel aux clients exigeants recherchant des propriétés résidentielles et commerciales haut de gamme.',
+          highlights: [
+            'Développement et gestion d\'un portefeuille clients de haute qualité',
+            'Recherche proactive et identification d\'opportunités de marché pour le développement commercial',
+            'Conseil et accompagnement des clients pour atteindre leurs objectifs d\'investissement immobilier',
+            'Mise à jour et gestion d\'une base de données complète de clients potentiels et actifs',
+            'Collaboration avec des propriétaires et une clientèle francophone',
+          ],
+        },
+        {
           date: '2022 – 2025',
           title: 'Responsable Partenariats B2B',
           company: 'PYF Real Estate · Bucarest, Roumanie',

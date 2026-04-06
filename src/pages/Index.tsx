@@ -63,14 +63,21 @@ const Index = () => {
                 </a>
               </li>
             ))}
-            <li>
-              <button
-                onClick={() => setLang(nextLang[lang])}
-                className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground text-sm font-medium transition-colors border border-border rounded-md px-3 py-1.5"
-              >
-                <Globe className="w-4 h-4" />
-                {langLabels[nextLang[lang]]}
-              </button>
+            <li className="flex items-center gap-1">
+              {langOptions.map((item) => (
+                <button
+                  key={item.code}
+                  onClick={() => setLang(item.code)}
+                  className={`flex items-center gap-1 text-xs font-medium px-2 py-1.5 rounded-md transition-all ${
+                    lang === item.code
+                      ? 'bg-primary text-primary-foreground'
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  <span className="text-base">{item.flag}</span>
+                  {item.label}
+                </button>
+              ))}
             </li>
           </ul>
           <div className="flex items-center gap-3 md:hidden">

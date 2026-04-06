@@ -48,6 +48,19 @@ export const translations = {
           highlights: [] as string[],
         },
         {
+          date: 'Jun 2025 – Dec 2025',
+          title: 'Real Estate Sales Consultant',
+          company: 'North Bucharest Investments · Bucharest, Romania',
+          description: 'Premium luxury real estate agency specializing in high-value property investments. Delivered exceptional service to discerning clients seeking upscale residential and commercial properties in prime locations.',
+          highlights: [
+            'Expanding and managing a high-quality client portfolio',
+            'Proactively researching and identifying market opportunities for business development',
+            'Advising and guiding clients to meet their real estate investment goals',
+            'Maintaining and updating a comprehensive database of prospective and active clients',
+            'Working with landlords and French-speaking clientele',
+          ],
+        },
+        {
           date: '2022 – 2025',
           title: 'B2B Partnerships Manager',
           company: 'PYF Real Estate · Bucharest, Romania',
@@ -175,6 +188,19 @@ export const translations = {
           highlights: [] as string[],
         },
         {
+          date: 'Juin 2025 – Déc 2025',
+          title: 'Consultant Ventes Immobilières',
+          company: 'North Bucharest Investments · Bucarest, Roumanie',
+          description: 'Agence immobilière de luxe premium spécialisée dans les investissements immobiliers de haute valeur. Service exceptionnel aux clients exigeants recherchant des propriétés résidentielles et commerciales haut de gamme.',
+          highlights: [
+            'Développement et gestion d\'un portefeuille clients de haute qualité',
+            'Recherche proactive et identification d\'opportunités de marché pour le développement commercial',
+            'Conseil et accompagnement des clients pour atteindre leurs objectifs d\'investissement immobilier',
+            'Mise à jour et gestion d\'une base de données complète de clients potentiels et actifs',
+            'Collaboration avec des propriétaires et une clientèle francophone',
+          ],
+        },
+        {
           date: '2022 – 2025',
           title: 'Responsable Partenariats B2B',
           company: 'PYF Real Estate · Bucarest, Roumanie',
@@ -300,6 +326,19 @@ export const translations = {
           company: 'Portofoliu Clienți · București, România',
           description: 'Networking cross-border activ, intermediere deal-uri B2B și arhitectură de vânzări digitale (online/offline). Parteneriate cu NutraGrup (companie poloneză) și TX24 (companie olandeză), ambele operând din București.',
           highlights: [] as string[],
+        },
+        {
+          date: 'Iun 2025 – Dec 2025',
+          title: 'Consultant Vânzări Imobiliare',
+          company: 'North Bucharest Investments · București, România',
+          description: 'Agenție imobiliară premium de lux, specializată în investiții imobiliare de mare valoare. Servicii excepționale pentru clienți exigenți care caută proprietăți rezidențiale și comerciale de top.',
+          highlights: [
+            'Extinderea și gestionarea unui portofoliu de clienți de înaltă calitate',
+            'Cercetare proactivă și identificarea oportunităților de piață pentru dezvoltarea afacerilor',
+            'Consiliere și ghidare a clienților pentru atingerea obiectivelor de investiții imobiliare',
+            'Menținerea și actualizarea unei baze de date complete de clienți potențiali și activi',
+            'Colaborare cu proprietari și clientelă francofonă',
+          ],
         },
         {
           date: '2022 – 2025',

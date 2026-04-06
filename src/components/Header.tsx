@@ -66,20 +66,26 @@ export const Header = ({ lang, onLanguageChange, t }: HeaderProps) => {
 
           {/* Language Toggle & Mobile Menu */}
           <div className="flex items-center gap-4">
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => {
-                const langs: Language[] = ['fr', 'ar', 'en'];
-                const currentIndex = langs.indexOf(lang);
-                const nextLang = langs[(currentIndex + 1) % langs.length];
-                onLanguageChange(nextLang);
-              }}
-              className="flex items-center gap-2"
-            >
-              <Globe className="w-4 h-4" />
-              {lang === 'fr' ? 'AR' : lang === 'ar' ? 'EN' : 'FR'}
-            </Button>
+            <div className="flex items-center gap-1">
+              {([
+                { code: 'fr' as Language, flag: '🇫🇷', label: 'FR' },
+                { code: 'en' as Language, flag: '🇬🇧', label: 'EN' },
+                { code: 'ar' as Language, flag: '🇩🇿', label: 'AR' },
+              ]).map((item) => (
+                <Button
+                  key={item.code}
+                  variant={lang === item.code ? 'default' : 'ghost'}
+                  size="sm"
+                  onClick={() => onLanguageChange(item.code)}
+                  className={`flex items-center gap-1.5 px-2 py-1 text-xs ${
+                    lang === item.code ? 'bg-primary text-primary-foreground' : 'text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  <span className="text-base">{item.flag}</span>
+                  {item.label}
+                </Button>
+              ))}
+            </div>
 
             <Button
               variant="ghost"

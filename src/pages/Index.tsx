@@ -293,12 +293,11 @@ const Index = () => {
       </section>
 
       {/* Animated GIF before Contact */}
-      <div className="flex justify-center py-12">
+      <div className="flex justify-center py-12 bg-background">
         <img 
           src={downloadGif} 
           alt="Animation" 
-          className="max-w-[400px] w-full mix-blend-screen"
-          style={{ background: 'transparent' }}
+          className="max-w-[400px] w-full"
         />
       </div>
 

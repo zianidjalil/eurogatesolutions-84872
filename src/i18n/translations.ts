@@ -328,6 +328,19 @@ export const translations = {
           highlights: [] as string[],
         },
         {
+          date: 'Iun 2025 – Dec 2025',
+          title: 'Consultant Vânzări Imobiliare',
+          company: 'North Bucharest Investments · București, România',
+          description: 'Agenție imobiliară premium de lux, specializată în investiții imobiliare de mare valoare. Servicii excepționale pentru clienți exigenți care caută proprietăți rezidențiale și comerciale de top.',
+          highlights: [
+            'Extinderea și gestionarea unui portofoliu de clienți de înaltă calitate',
+            'Cercetare proactivă și identificarea oportunităților de piață pentru dezvoltarea afacerilor',
+            'Consiliere și ghidare a clienților pentru atingerea obiectivelor de investiții imobiliare',
+            'Menținerea și actualizarea unei baze de date complete de clienți potențiali și activi',
+            'Colaborare cu proprietari și clientelă francofonă',
+          ],
+        },
+        {
           date: '2022 – 2025',
           title: 'Manager Parteneriate B2B',
           company: 'PYF Real Estate · București, România',

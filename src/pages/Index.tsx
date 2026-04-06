@@ -20,6 +20,43 @@ const skillsList = [
   'Digital Body Language', 'Affiliate Marketing', 'E-commerce',
 ];
 
+const TypewriterText = ({ text }: { text: string }) => {
+  const [displayed, setDisplayed] = useState('');
+  const [index, setIndex] = useState(0);
+  useEffect(() => { setDisplayed(''); setIndex(0); }, [text]);
+  useEffect(() => {
+    if (index < text.length) {
+      const timer = setTimeout(() => {
+        setDisplayed(prev => prev + text[index]);
+        setIndex(i => i + 1);
+      }, 60);
+      return () => clearTimeout(timer);
+    }
+  }, [index, text]);
+  return (
+    <span className="relative">
+      {displayed.split('').map((char, i) => (
+        <motion.span
+          key={i}
+          initial={{ opacity: 0, textShadow: '0 0 0px hsl(217 100% 55%)' }}
+          animate={{ opacity: 1, textShadow: ['0 0 20px hsl(217 100% 55%)', '0 0 40px hsl(217 100% 65%)', '0 0 10px hsl(217 100% 55%)'] }}
+          transition={{ duration: 0.8, delay: i * 0.02 }}
+          className="inline-block text-primary drop-shadow-[0_0_8px_hsl(217,100%,55%)]"
+          style={{ filter: 'brightness(1.3)' }}
+        >
+          {char === ' ' ? '\u00A0' : char}
+        </motion.span>
+      ))}
+      <motion.span
+        className="inline-block w-[3px] h-[1em] bg-primary ml-1 align-middle"
+        animate={{ opacity: [1, 0, 1] }}
+        transition={{ duration: 0.8, repeat: Infinity }}
+        style={{ boxShadow: '0 0 10px hsl(217 100% 55%), 0 0 20px hsl(217 100% 55%)' }}
+      />
+    </span>
+  );
+};
+
 const Index = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -35,8 +72,11 @@ const Index = () => {
     { label: t.nav.contact, href: '#contact' },
   ];
 
-  const langLabels: Record<Lang, string> = { en: 'EN', fr: 'FR', ro: 'RO' };
-  const nextLang: Record<Lang, Lang> = { en: 'fr', fr: 'ro', ro: 'en' };
+  const langOptions: { code: Lang; flag: string; label: string }[] = [
+    { code: 'fr', flag: '🇫🇷', label: 'FR' },
+    { code: 'en', flag: '🇬🇧', label: 'EN' },
+    { code: 'ro', flag: '🇷🇴', label: 'RO' },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -60,24 +100,40 @@ const Index = () => {
                 </a>
               </li>
             ))}
-            <li>
-              <button
-                onClick={() => setLang(nextLang[lang])}
-                className="flex items-center gap-1.5 text-muted-foreground hover:text-foreground text-sm font-medium transition-colors border border-border rounded-md px-3 py-1.5"
-              >
-                <Globe className="w-4 h-4" />
-                {langLabels[nextLang[lang]]}
-              </button>
+            <li className="flex items-center gap-1">
+              {langOptions.map((item) => (
+                <button
+                  key={item.code}
+                  onClick={() => setLang(item.code)}
+                  className={`flex items-center gap-1 text-xs font-medium px-2 py-1.5 rounded-md transition-all ${
+                    lang === item.code
+                      ? 'bg-primary text-primary-foreground'
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  <span className="text-base">{item.flag}</span>
+                  {item.label}
+                </button>
+              ))}
             </li>
           </ul>
           <div className="flex items-center gap-3 md:hidden">
-            <button
-              onClick={() => setLang(nextLang[lang])}
-              className="flex items-center gap-1 text-muted-foreground text-sm border border-border rounded-md px-2 py-1"
-            >
-              <Globe className="w-4 h-4" />
-              {langLabels[nextLang[lang]]}
-            </button>
+            <div className="flex items-center gap-0.5">
+              {langOptions.map((item) => (
+                <button
+                  key={item.code}
+                  onClick={() => setLang(item.code)}
+                  className={`flex items-center gap-0.5 text-[10px] font-medium px-1.5 py-1 rounded transition-all ${
+                    lang === item.code
+                      ? 'bg-primary text-primary-foreground'
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  <span className="text-sm">{item.flag}</span>
+                  {item.label}
+                </button>
+              ))}
+            </div>
             <button onClick={() => setMobileOpen(!mobileOpen)}>
               {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -97,9 +153,7 @@ const Index = () => {
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className="max-w-[800px] text-center">
           <p className="text-primary text-sm font-medium uppercase tracking-widest mb-4">{t.hero.subtitle}</p>
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
-            <span className="bg-gradient-to-br from-foreground to-muted-foreground bg-clip-text text-transparent">{t.hero.title1}</span>
-            <br />
-            <span className="bg-gradient-to-br from-foreground to-muted-foreground bg-clip-text text-transparent">{t.hero.title2}</span>
+            <TypewriterText text={`${t.hero.title1} ${t.hero.title2}`} />
           </h1>
           <p className="text-muted-foreground text-lg max-w-[600px] mx-auto mb-10 leading-relaxed">
             {t.hero.description}

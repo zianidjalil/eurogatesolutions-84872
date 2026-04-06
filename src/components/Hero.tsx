@@ -29,9 +29,32 @@ const TypewriterText = ({ text }: { text: string }) => {
   }, [index, text]);
 
   return (
-    <span>
-      {displayed}
-      <span className="inline-block w-[3px] h-[1em] bg-primary ml-1 align-middle animate-pulse" />
+    <span className="relative">
+      {displayed.split('').map((char, i) => (
+        <motion.span
+          key={i}
+          initial={{ opacity: 0, textShadow: '0 0 0px hsl(217 100% 55%)' }}
+          animate={{ 
+            opacity: 1, 
+            textShadow: [
+              '0 0 20px hsl(217 100% 55%)', 
+              '0 0 40px hsl(217 100% 65%)', 
+              '0 0 10px hsl(217 100% 55%)'
+            ] 
+          }}
+          transition={{ duration: 0.8, delay: i * 0.06 }}
+          className="inline-block text-primary drop-shadow-[0_0_8px_hsl(217,100%,55%)]"
+          style={{ filter: 'brightness(1.3)' }}
+        >
+          {char === ' ' ? '\u00A0' : char}
+        </motion.span>
+      ))}
+      <motion.span 
+        className="inline-block w-[3px] h-[1em] bg-primary ml-1 align-middle"
+        animate={{ opacity: [1, 0, 1] }}
+        transition={{ duration: 0.8, repeat: Infinity }}
+        style={{ boxShadow: '0 0 10px hsl(217 100% 55%), 0 0 20px hsl(217 100% 55%)' }}
+      />
     </span>
   );
 };
@@ -71,7 +94,7 @@ export const Hero = ({ lang, t }: HeroProps) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
             <TypewriterText text={t.hero.title} />
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto">

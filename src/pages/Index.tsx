@@ -81,13 +81,22 @@ const Index = () => {
             </li>
           </ul>
           <div className="flex items-center gap-3 md:hidden">
-            <button
-              onClick={() => setLang(nextLang[lang])}
-              className="flex items-center gap-1 text-muted-foreground text-sm border border-border rounded-md px-2 py-1"
-            >
-              <Globe className="w-4 h-4" />
-              {langLabels[nextLang[lang]]}
-            </button>
+            <div className="flex items-center gap-0.5">
+              {langOptions.map((item) => (
+                <button
+                  key={item.code}
+                  onClick={() => setLang(item.code)}
+                  className={`flex items-center gap-0.5 text-[10px] font-medium px-1.5 py-1 rounded transition-all ${
+                    lang === item.code
+                      ? 'bg-primary text-primary-foreground'
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  <span className="text-sm">{item.flag}</span>
+                  {item.label}
+                </button>
+              ))}
+            </div>
             <button onClick={() => setMobileOpen(!mobileOpen)}>
               {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>

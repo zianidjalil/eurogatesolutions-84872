@@ -48,6 +48,19 @@ export const translations = {
           highlights: [] as string[],
         },
         {
+          date: 'Jun 2025 – Dec 2025',
+          title: 'Real Estate Sales Consultant',
+          company: 'North Bucharest Investments · Bucharest, Romania',
+          description: 'Premium luxury real estate agency specializing in high-value property investments. Delivered exceptional service to discerning clients seeking upscale residential and commercial properties in prime locations.',
+          highlights: [
+            'Expanding and managing a high-quality client portfolio',
+            'Proactively researching and identifying market opportunities for business development',
+            'Advising and guiding clients to meet their real estate investment goals',
+            'Maintaining and updating a comprehensive database of prospective and active clients',
+            'Working with landlords and French-speaking clientele',
+          ],
+        },
+        {
           date: '2022 – 2025',
           title: 'B2B Partnerships Manager',
           company: 'PYF Real Estate · Bucharest, Romania',

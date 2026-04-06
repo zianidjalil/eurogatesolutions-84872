@@ -35,8 +35,11 @@ const Index = () => {
     { label: t.nav.contact, href: '#contact' },
   ];
 
-  const langLabels: Record<Lang, string> = { en: 'EN', fr: 'FR', ro: 'RO' };
-  const nextLang: Record<Lang, Lang> = { en: 'fr', fr: 'ro', ro: 'en' };
+  const langOptions: { code: Lang; flag: string; label: string }[] = [
+    { code: 'fr', flag: '🇫🇷', label: 'FR' },
+    { code: 'en', flag: '🇬🇧', label: 'EN' },
+    { code: 'ro', flag: '🇷🇴', label: 'RO' },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);

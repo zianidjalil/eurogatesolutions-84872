@@ -116,9 +116,7 @@ const Index = () => {
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className="max-w-[800px] text-center">
           <p className="text-primary text-sm font-medium uppercase tracking-widest mb-4">{t.hero.subtitle}</p>
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
-            <span className="bg-gradient-to-br from-foreground to-muted-foreground bg-clip-text text-transparent">{t.hero.title1}</span>
-            <br />
-            <span className="bg-gradient-to-br from-foreground to-muted-foreground bg-clip-text text-transparent">{t.hero.title2}</span>
+            <TypewriterText text={`${t.hero.title1} ${t.hero.title2}`} />
           </h1>
           <p className="text-muted-foreground text-lg max-w-[600px] mx-auto mb-10 leading-relaxed">
             {t.hero.description}

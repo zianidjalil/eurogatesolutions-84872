@@ -20,6 +20,43 @@ const skillsList = [
   'Digital Body Language', 'Affiliate Marketing', 'E-commerce',
 ];
 
+const TypewriterText = ({ text }: { text: string }) => {
+  const [displayed, setDisplayed] = useState('');
+  const [index, setIndex] = useState(0);
+  useEffect(() => { setDisplayed(''); setIndex(0); }, [text]);
+  useEffect(() => {
+    if (index < text.length) {
+      const timer = setTimeout(() => {
+        setDisplayed(prev => prev + text[index]);
+        setIndex(i => i + 1);
+      }, 60);
+      return () => clearTimeout(timer);
+    }
+  }, [index, text]);
+  return (
+    <span className="relative">
+      {displayed.split('').map((char, i) => (
+        <motion.span
+          key={i}
+          initial={{ opacity: 0, textShadow: '0 0 0px hsl(217 100% 55%)' }}
+          animate={{ opacity: 1, textShadow: ['0 0 20px hsl(217 100% 55%)', '0 0 40px hsl(217 100% 65%)', '0 0 10px hsl(217 100% 55%)'] }}
+          transition={{ duration: 0.8, delay: i * 0.02 }}
+          className="inline-block text-primary drop-shadow-[0_0_8px_hsl(217,100%,55%)]"
+          style={{ filter: 'brightness(1.3)' }}
+        >
+          {char === ' ' ? '\u00A0' : char}
+        </motion.span>
+      ))}
+      <motion.span
+        className="inline-block w-[3px] h-[1em] bg-primary ml-1 align-middle"
+        animate={{ opacity: [1, 0, 1] }}
+        transition={{ duration: 0.8, repeat: Infinity }}
+        style={{ boxShadow: '0 0 10px hsl(217 100% 55%), 0 0 20px hsl(217 100% 55%)' }}
+      />
+    </span>
+  );
+};
+
 const Index = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);

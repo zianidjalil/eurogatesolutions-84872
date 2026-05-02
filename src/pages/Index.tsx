@@ -13,10 +13,13 @@ import { translations, Lang } from '@/i18n/translations';
 
 const skillsList = [
   'NLP', 'Employee Training', 'Emotional Intelligence', 'Marketing Communication',
-  'Cold Calling', 'B2B Marketing', 'Development Psychology', 'Business Process Outsourcing',
+  'Headhunting', 'B2B Marketing', 'Development Psychology',
   'B2C Sales', 'Sales Negotiation & Contracts', 'Negotiation Techniques',
-  'Interactive Teaching', 'CRM', 'E-learning', 'Gamification', 'BI Tools',
-  'Digital Body Language', 'Affiliate Marketing', 'E-commerce',
+  'Interactive Teaching', 'Affiliate Marketing',
+  'Jurisdictional Knowledge', 'Compliance Management', 'Risk Assessment',
+  'Ecosystem Access', 'Cross-Cultural Communication', 'Stakeholder Management',
+  'Process Migration', 'Talent Strategy', 'Resource Allocation',
+  'GTM Strategy', 'Financial Modeling', 'Agile Problem Solving',
 ];
 
 const TypewriterText = ({ text }: { text: string }) => {
@@ -257,7 +260,7 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
             {[
               { value: '14+', label: 'Years Experience' },
-              { value: '600K+', label: 'B2C Customers Managed' },
+              { value: '600K+', label: 'B2B/C Customers Managed' },
               { value: '96%', label: 'Client Retention' },
               { value: '€1.2M', label: 'Revenue Unlocked' },
             ].map((stat, i) => (
@@ -298,23 +301,6 @@ const Index = () => {
             {skillsList.map(s => (
               <span key={s} className="px-4 py-2 bg-muted/70 backdrop-blur-sm border border-border rounded-md text-sm text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors cursor-default">{s}</span>
             ))}
-          </div>
-          <div className="grid md:grid-cols-3 gap-6 mt-12">
-             <div className="p-6 bg-card/70 backdrop-blur-sm border border-border rounded-xl text-center">
-              <Brain className="w-8 h-8 text-primary mx-auto mb-3" />
-              <h3 className="font-semibold mb-1">CX & Sales</h3>
-              <p className="text-muted-foreground text-sm">D2D, TeleSales, Closing, B2C & B2B</p>
-            </div>
-             <div className="p-6 bg-card/70 backdrop-blur-sm border border-border rounded-xl text-center">
-              <GraduationCap className="w-8 h-8 text-primary mx-auto mb-3" />
-              <h3 className="font-semibold mb-1">Training & Coaching</h3>
-              <p className="text-muted-foreground text-sm">NLP, Emotional Intelligence, Interactive Teaching</p>
-            </div>
-            <div className="p-6 bg-card/70 backdrop-blur-sm border border-border rounded-xl text-center">
-              <Briefcase className="w-8 h-8 text-primary mx-auto mb-3" />
-              <h3 className="font-semibold mb-1">Business Intelligence</h3>
-              <p className="text-muted-foreground text-sm">CRM, Gamification, BI Tools, E-commerce</p>
-            </div>
           </div>
         </FadeIn>
       </section>

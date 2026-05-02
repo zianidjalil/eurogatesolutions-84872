@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Linkedin, Github, ChevronDown, Menu, X, Globe, Briefcase, GraduationCap, Brain, TrendingUp, Award, ChevronRight } from 'lucide-react';
 import profileImg from '@/assets/profile.jpg';
-import globeImg from '@/assets/cross-border-globe.jpg';
 import openDataMap from '@/assets/open-data-map.gif';
 import pill3dMotion from '@/assets/pill-3d-motion.gif';
 import retroTvs from '@/assets/retro-tvs.jpg';
@@ -168,31 +167,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Cross-Border Sales Globe */}
-      <section className="relative py-20 px-6">
-        <div className="max-w-[900px] mx-auto">
-          <FadeIn>
-            <div className="relative flex items-center justify-center">
-              <motion.div
-                className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/30 border border-primary/20"
-                animate={{
-                  rotateX: [0, 1.5, 0, -1.5, 0],
-                  rotateY: [0, -2, 0, 2, 0],
-                  rotateZ: [0, 0.5, 0, -0.5, 0],
-                }}
-                transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-                style={{ perspective: 800, transformStyle: 'preserve-3d' }}
-              >
-                <img
-                  src={globeImg}
-                  alt="Cross-Border Sales Intermediation Globe"
-                  className="w-full h-auto block rounded-2xl"
-                />
-              </motion.div>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
+      {/* Partners Flags 3D */}
+      <PartnersFlags />
 
       <section id="about" className="py-24 px-6 max-w-[1200px] mx-auto">
         <FadeIn>

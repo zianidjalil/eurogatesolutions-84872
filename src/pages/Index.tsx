@@ -473,3 +473,69 @@ function FadeIn({ children }: { children: React.ReactNode }) {
 }
 
 export default Index;
+
+const partners = [
+  { country: 'Romania', code: 'ro', flag: '🇷🇴' },
+  { country: 'Poland', code: 'pl', flag: '🇵🇱' },
+  { country: 'France', code: 'fr', flag: '🇫🇷' },
+  { country: 'Netherlands', code: 'nl', flag: '🇳🇱' },
+  { country: 'Belgium', code: 'be', flag: '🇧🇪' },
+];
+
+function PartnersFlags() {
+  return (
+    <section className="relative py-20 px-6">
+      <div className="max-w-[1100px] mx-auto">
+        <FadeIn>
+          <div className="text-center mb-12">
+            <p className="text-primary text-sm font-medium uppercase tracking-widest mb-3">Partners</p>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Trusted Across Europe</h2>
+            <p className="text-muted-foreground mt-3">Romania · Poland · France · Netherlands · Belgium</p>
+          </div>
+          <div
+            className="flex flex-wrap items-center justify-center gap-6 md:gap-10"
+            style={{ perspective: 1000 }}
+          >
+            {partners.map((p, i) => (
+              <motion.div
+                key={p.code}
+                initial={{ opacity: 0, y: 30, rotateY: -45 }}
+                whileInView={{ opacity: 1, y: 0, rotateY: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.12, duration: 0.7, type: 'spring' }}
+                whileHover={{ scale: 1.08, rotateY: 12, rotateX: -8 }}
+                style={{ transformStyle: 'preserve-3d' }}
+                className="group"
+              >
+                <motion.div
+                  animate={{
+                    rotateX: [0, 4, 0, -4, 0],
+                    rotateY: [0, -6, 0, 6, 0],
+                    y: [0, -6, 0, 6, 0],
+                  }}
+                  transition={{ duration: 5 + i * 0.4, repeat: Infinity, ease: 'easeInOut' }}
+                  style={{ transformStyle: 'preserve-3d' }}
+                  className="relative flex flex-col items-center gap-3 p-6 rounded-2xl bg-card/60 backdrop-blur-sm border border-border group-hover:border-primary/40 shadow-xl shadow-primary/10 transition-colors"
+                >
+                  <div
+                    className="text-6xl md:text-7xl drop-shadow-[0_8px_16px_rgba(0,0,0,0.4)]"
+                    style={{ transform: 'translateZ(30px)' }}
+                  >
+                    {p.flag}
+                  </div>
+                  <span
+                    className="text-sm font-semibold text-foreground tracking-wide"
+                    style={{ transform: 'translateZ(20px)' }}
+                  >
+                    {p.country}
+                  </span>
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-primary/10 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+                </motion.div>
+              </motion.div>
+            ))}
+          </div>
+        </FadeIn>
+      </div>
+    </section>
+  );
+}

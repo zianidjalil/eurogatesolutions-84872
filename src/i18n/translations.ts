@@ -31,7 +31,7 @@ export const translations = {
       items: [
         'Business & Management Consulting',
         'National Real Estate Transaction Intermediation',
-        'BPO (Business Product Outsourcing)',
+        'BPO (Business Process Outsourcing)',
         'HORECA',
         'Laundry Business',
       ],
@@ -171,7 +171,7 @@ export const translations = {
       items: [
         "Conseil en affaires et management",
         "Intermédiation nationale de transactions immobilières",
-        "BPO (Business Product Outsourcing)",
+        "BPO (Business Process Outsourcing)",
         "HORECA",
         "Activité de blanchisserie",
       ],
@@ -311,7 +311,7 @@ export const translations = {
       items: [
         'Consultanță în afaceri și management',
         'Intermediere națională a tranzacțiilor imobiliare',
-        'BPO (Business Product Outsourcing)',
+        'BPO (Business Process Outsourcing)',
         'HORECA',
         'Servicii de spălătorie',
       ],

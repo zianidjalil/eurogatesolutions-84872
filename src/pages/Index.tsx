@@ -307,10 +307,11 @@ const Index = () => {
 
       {/* Animated GIF before Contact */}
       <div className="flex justify-center py-12 bg-background">
-        <img 
-          src={downloadGif} 
-          alt="Animation" 
+        <img
+          src={downloadGif}
+          alt="Animation"
           className="max-w-[400px] w-full"
+          style={{ mixBlendMode: 'screen' }}
         />
       </div>
 

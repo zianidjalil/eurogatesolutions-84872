@@ -151,7 +151,7 @@ const Index = () => {
       <section className="min-h-screen flex items-center justify-center px-6 pt-24 pb-16 relative">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className="max-w-[800px] text-center">
           <p className="text-primary text-sm font-medium uppercase tracking-widest mb-4">{t.hero.subtitle}</p>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
+          <h1 className="text-2xl md:text-4xl font-bold tracking-tight mb-6 leading-[1.1]">
             <TypewriterText text={`${t.hero.title1} ${t.hero.title2}`} />
           </h1>
           <p className="text-muted-foreground text-lg max-w-[600px] mx-auto mb-10 leading-relaxed">
@@ -166,9 +166,6 @@ const Index = () => {
           <ChevronDown className="w-6 h-6 text-muted-foreground" />
         </div>
       </section>
-
-      {/* Partners Flags 3D */}
-      <PartnersFlags />
 
       <section id="about" className="py-24 px-6 max-w-[1200px] mx-auto">
         <FadeIn>

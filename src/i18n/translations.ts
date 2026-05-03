@@ -10,7 +10,7 @@ export const translations = {
       contact: 'Contact',
     },
     hero: {
-      subtitle: 'CX Specialist & Business Consultant',
+      subtitle: 'B2B End to End Sales Services',
       title1: 'Transforming Challenges',
       title2: 'Into Opportunities',
       description: "Expanding into Romania isn't just about paperwork and partnerships. It's about knowing who to call, what actually works here, and how to avoid the mistakes that cost foreign companies months and at least €50k in wasted spend on delays, wrong partners selection, compliance errors, and missed revenue windows, before they make their first sale.",
@@ -150,7 +150,7 @@ export const translations = {
       contact: 'Contact',
     },
     hero: {
-      subtitle: 'Spécialiste CX & Consultant Business',
+      subtitle: 'B2B End to End Sales Services',
       title1: 'Transformer les Défis',
       title2: 'En Opportunités',
       description: "S'implanter en Roumanie ne se résume pas aux démarches administratives et aux partenariats. Il s'agit de savoir qui contacter, ce qui fonctionne réellement ici et comment éviter les erreurs qui coûtent aux entreprises étrangères des mois et au moins 50 000 € en dépenses gaspillées : retards, mauvais choix de partenaires, erreurs de conformité et fenêtres de revenus manquées, avant même leur première vente.",
@@ -290,7 +290,7 @@ export const translations = {
       contact: 'Contact',
     },
     hero: {
-      subtitle: 'Specialist CX & Consultant Business',
+      subtitle: 'B2B End to End Sales Services',
       title1: 'Transformăm Provocările',
       title2: 'În Oportunități',
       description: 'Extinderea în România nu înseamnă doar formalități și parteneriate. Înseamnă să știi pe cine să suni, ce funcționează cu adevărat aici și cum să eviți greșelile care costă companiile străine luni de zile și cel puțin 50.000 € în cheltuieli irosite pe întârzieri, alegerea greșită a partenerilor, erori de conformitate și ferestre de venit ratate, înainte de a face prima vânzare.',

@@ -5,7 +5,7 @@ import profileImg from '@/assets/profile.jpg';
 import openDataMap from '@/assets/open-data-map.gif';
 import pill3dMotion from '@/assets/pill-3d-motion.gif';
 import retroTvs from '@/assets/retro-tvs.jpg';
-import downloadGif from '@/assets/download.gif';
+import romaniaEuFlags from '@/assets/romania-eu-flags.png';
 import { MatrixBackground } from '@/components/MatrixBackground';
 import { AIAgent } from '@/components/AIAgent';
 
@@ -305,13 +305,12 @@ const Index = () => {
         </FadeIn>
       </section>
 
-      {/* Animated GIF before Contact */}
-      <div className="flex justify-center py-12 bg-background">
+      {/* Romania & EU flags before Contact */}
+      <div className="flex justify-center py-12">
         <img
-          src={downloadGif}
-          alt="Animation"
-          className="max-w-[400px] w-full"
-          style={{ mixBlendMode: 'screen' }}
+          src={romaniaEuFlags}
+          alt="Romania and European Union flags"
+          className="max-w-[400px] w-full rounded-xl border border-border shadow-2xl shadow-primary/10"
         />
       </div>
 

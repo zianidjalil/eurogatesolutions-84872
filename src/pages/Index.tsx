@@ -204,7 +204,37 @@ const Index = () => {
         <FadeIn>
           <div className="mb-16">
             <p className="text-primary text-sm font-medium uppercase tracking-widest mb-3">{t.services.label}</p>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">{t.services.title}</h2>
+            <h2 className="text-2xl md:text-4xl font-bold tracking-tight leading-tight flex flex-wrap gap-x-3 gap-y-2">
+              {[
+                { label: 'International', accent: false },
+                { label: 'Business', accent: false },
+                { label: 'Expansion', accent: false },
+                { label: 'Partner', accent: false },
+                { label: '(BEP)', accent: true },
+                { label: '&', accent: false },
+                { label: 'Regional', accent: false },
+                { label: 'Business', accent: false },
+                { label: 'Development', accent: false },
+                { label: 'Manager', accent: false },
+                { label: '(BDM)', accent: true },
+              ].map((w, i) => (
+                <motion.span
+                  key={i}
+                  initial={{ opacity: 0, y: 12, filter: 'blur(8px)' }}
+                  whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08, duration: 0.5, ease: 'easeOut' }}
+                  whileHover={{ y: -3, scale: 1.04 }}
+                  className={
+                    w.accent
+                      ? 'inline-block px-2 py-0.5 rounded-md bg-primary/15 text-primary border border-primary/40 shadow-[0_0_18px_hsl(217,100%,55%,0.45)]'
+                      : 'inline-block text-foreground hover:text-primary transition-colors'
+                  }
+                >
+                  {w.label}
+                </motion.span>
+              ))}
+            </h2>
             <p className="text-muted-foreground mt-2">{t.services.subtitle}</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -306,12 +336,14 @@ const Index = () => {
       </section>
 
       {/* Romania & EU flags before Contact */}
-      <div className="flex justify-center py-12">
-        <img
-          src={romaniaEuFlags}
-          alt="Romania and European Union flags"
-          className="max-w-[400px] w-full rounded-xl border border-border shadow-2xl shadow-primary/10"
-        />
+      <div className="flex justify-center py-12 px-6">
+        <div className="relative inline-block">
+          <img
+            src={romaniaEuFlags}
+            alt="Romania and European Union flags waving"
+            className="flag-wave max-w-[400px] w-full rounded-xl border border-border shadow-2xl shadow-primary/10"
+          />
+        </div>
       </div>
 
       {/* Contact */}

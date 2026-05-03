@@ -26,7 +26,7 @@ export const translations = {
     },
     services: {
       label: 'Services',
-      title: 'Business Development Manager (BDM)',
+      title: 'International Business Expansion Partner (BEP) & Regional Business Development Manager (BDM)',
       subtitle: 'Sole Enterprise (Persoană Fizică Autorizată – PFA)',
       items: [
         'Business & Management Consulting',
@@ -166,7 +166,7 @@ export const translations = {
     },
     services: {
       label: 'Services',
-      title: 'Business Development Manager (BDM)',
+      title: 'International Business Expansion Partner (BEP) & Regional Business Development Manager (BDM)',
       subtitle: 'Entreprise Individuelle (Persoană Fizică Autorizată – PFA)',
       items: [
         "Conseil en affaires et management",
@@ -306,7 +306,7 @@ export const translations = {
     },
     services: {
       label: 'Servicii',
-      title: 'Business Development Manager (BDM)',
+      title: 'International Business Expansion Partner (BEP) & Regional Business Development Manager (BDM)',
       subtitle: 'Sole Enterprise (Persoană Fizică Autorizată – PFA)',
       items: [
         'Consultanță în afaceri și management',

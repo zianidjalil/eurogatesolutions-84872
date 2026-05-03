@@ -77,3 +77,18 @@
     transform: translateY(-5px);
   }
 }
+
+@keyframes flag-wave {
+  0%   { transform: perspective(800px) rotateY(0deg) skewY(0deg) translateY(0); }
+  25%  { transform: perspective(800px) rotateY(6deg) skewY(-1.5deg) translateY(-2px); }
+  50%  { transform: perspective(800px) rotateY(0deg) skewY(0deg) translateY(0); }
+  75%  { transform: perspective(800px) rotateY(-6deg) skewY(1.5deg) translateY(2px); }
+  100% { transform: perspective(800px) rotateY(0deg) skewY(0deg) translateY(0); }
+}
+
+.flag-wave {
+  animation: flag-wave 3.5s ease-in-out infinite;
+  transform-origin: left center;
+  will-change: transform, filter;
+  filter: drop-shadow(0 10px 25px hsl(217 100% 55% / 0.25));
+}

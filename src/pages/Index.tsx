@@ -336,12 +336,14 @@ const Index = () => {
       </section>
 
       {/* Romania & EU flags before Contact */}
-      <div className="flex justify-center py-12">
-        <img
-          src={romaniaEuFlags}
-          alt="Romania and European Union flags"
-          className="max-w-[400px] w-full rounded-xl border border-border shadow-2xl shadow-primary/10"
-        />
+      <div className="flex justify-center py-12 px-6">
+        <div className="relative inline-block">
+          <img
+            src={romaniaEuFlags}
+            alt="Romania and European Union flags waving"
+            className="flag-wave max-w-[400px] w-full rounded-xl border border-border shadow-2xl shadow-primary/10"
+          />
+        </div>
       </div>
 
       {/* Contact */}
